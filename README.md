@@ -13,7 +13,7 @@ own geometry.
 ```
 npm install          # three + postprocessing + esbuild
 npm run assets       # fetch CC0 source assets (optional; the example needs none)
-npm run build        # per scene: scenes/<name>/build/  ->  dist/<scene>.html (single file)
+npm run build        # (inside a scene folder) -> dist/<scene>.html, single file, no CDN
 ```
 
 Open the produced HTML by double-clicking it. Drag to orbit, wheel to zoom.
@@ -29,11 +29,7 @@ kit/lib/
   pipeline.js     one call builds the whole render stack (see below)
   engine.js       geometry buckets + merge, inverted-hull outline, lights, rain, ripples, steam, camera
   art.js          procedural texture atlas (canvas-drawn: wood, tile, plaster, paper, posters, glass…)
-scenes/izakaya-yokocho/
-  src/shops.js    the only file a new scene really has to write: assembly + props
-  src/main.js     6 lines — declares the scene list and hands it to the kit
-  build/          esbuild bundler (three + postprocessing inlined)
-  test/           objective self-check scripts
+scenes/           (empty for now: the next scene is assembled from blocks on a strict baseline)
 kit/blocks/
   registry.js     block registry + assembly: a scene is a LIST of blocks, and each block carries a
                   round (1 geometry / 2 procedural textures / 3 shaders & post) so it can be staged
@@ -55,7 +51,7 @@ Everything is parameterised via the `env` / `post` options, so a scene stays dec
 
 ### Procedural-first
 
-The example scene has **no textures on disk**: every surface — roof tiles, board siding, plaster,
+Scenes keep **no textures on disk**: every surface — roof tiles, board siding, plaster,
 paper lanterns, menus, posters, glass, wet asphalt — is painted into a canvas atlas at runtime. That
 keeps the output a single file. Real PBR/HDRI sources are available through the asset script when a
 scene wants them.
@@ -86,8 +82,8 @@ one is added. Append `?step=` to the URL, or use the `step` option of the app:
 | `?step=3` | + shaders and post-processing (default) |
 
 Blocks declare their round in `kit/blocks/registry.js`; `placeBlocks()` skips any block whose round is
-above the current step. `scenes/*/test/rounds.mjs` opens all three steps and reports errors, triangles,
-mean brightness, blown and dead pixel ratios for each.
+above the current step. `kit/test/` ships the objective checks (screenshots, framing, brightness histogram, effect proof, compliance);
+the staged-rounds script opens all three steps and reports errors, triangles, mean and blown/dead pixel ratios.
 
 ### Assets without committing assets
 
