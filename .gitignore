@@ -1,0 +1,7 @@
+node_modules/
+dist/
+scenes/*/build/app.js
+scenes/*/shots/
+assets/*
+!assets/.gitkeep
+*.log

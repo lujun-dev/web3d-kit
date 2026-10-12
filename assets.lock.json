@@ -1,0 +1,43 @@
+{
+  "note": "素材清单：仓库只存这份清单 + 一键重下脚本，不存素材本体。node scripts/fetch-assets.mjs 复原。",
+  "assets": [
+    {
+      "name": "hdri-venice-sunset-1k",
+      "kind": "polyhaven",
+      "slug": "venice_sunset",
+      "res": "1k",
+      "dest": "assets/hdri/venice_sunset_1k.hdr",
+      "note": "雨夜小景的备用环境光/反射来源（当前管线用 RoomEnvironment，做真实环境时可替换）",
+      "sha256": "92fe2b29b1957828fb8925a57633540bbba5bf380d9285ed553443e834249352",
+      "bytes": 1440400,
+      "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/venice_sunset_1k.hdr",
+      "fetchedAt": "2026-10-12"
+    },
+    {
+      "name": "paving-stones-131",
+      "kind": "ambientcg",
+      "id": "PavingStones131",
+      "res": "1K",
+      "type": "JPG",
+      "dest": "assets/textures/PavingStones131_1K-JPG.zip",
+      "note": "湿石板路面的 PBR 贴图（含 normal/roughness），替代程序化石板",
+      "sha256": "4b48575f51af3f8cd8ba20021f8a471f22435749782e553493967425e498fa4d",
+      "bytes": 9241016,
+      "sourceUrl": "https://ambientcg.com/get?file=PavingStones131_1K-JPG.zip",
+      "fetchedAt": "2026-10-12"
+    },
+    {
+      "name": "metal-032-grate",
+      "kind": "ambientcg",
+      "id": "Metal032",
+      "res": "1K",
+      "type": "JPG",
+      "dest": "assets/textures/Metal032_1K-JPG.zip",
+      "note": "排水沟铁篦/井盖的金属贴图",
+      "sha256": "9e4f363905a647958c273154fa125d2a6440892d0e583f9b3af24bb08b5afc3c",
+      "bytes": 3650556,
+      "sourceUrl": "https://ambientcg.com/get?file=Metal032_1K-JPG.zip",
+      "fetchedAt": "2026-10-12"
+    }
+  ]
+}

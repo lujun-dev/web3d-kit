@@ -1,0 +1,24 @@
+{
+  "name": "web3d-kit",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Tiny 3D diorama scenes for the web: reusable three.js pipeline, procedural textures, block registry and staged rounds. Single-file HTML output.",
+  "keywords": [
+    "three.js",
+    "webgl",
+    "toon-shading",
+    "rain",
+    "night-scene",
+    "diorama"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "assets": "node scripts/fetch-assets.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "three": "^0.186.0",
+    "postprocessing": "^6.39.5"
+  }
+}
