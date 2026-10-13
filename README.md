@@ -1,122 +1,88 @@
 # web3d-kit
 
-A small, opinionated toolkit for building **miniature diorama scenes** on the web: a ready render pipeline,
-procedural texture library, block registry and objective self-check scripts. The kit is genre-agnostic;
-scenes are assembled from blocks on top of a strict baseline. square miniature
-street corners you can drag, rotate and zoom, exported as **one single-file HTML page** that runs
-offline with no CDN and no server.
+在网页上搭**微缩场景**（diorama）的工具箱：方形的小街角，能拖动旋转缩放，导出成**一个单文件 HTML**，离线双击即开、没有 CDN、没有服务器。
 
-Born from a simple goal: stop rebuilding the same render pipeline, the same procedural textures and
-the same 30 street props for every scene. The kit ships the reusable half; a scene only declares its
-own geometry.
+这个仓库的立场很明确：**先拆件、再拼接**，不要直接让 AI 生成一整场景。
 
-```
-npm install          # three + postprocessing + esbuild
-npm run assets       # fetch CC0 source assets (optional; the example needs none)
-npm run build        # (inside a scene folder) -> dist/<scene>.html, single file, no CDN
-```
+- 拆件可验证：件是死的，拼起来对不对能用数字量（顶点数、包围盒、构图量测）核。
+- 生成不可验证：好不好全凭感觉，而且下一次生成只会漂移，不会更好。
+- 拆件越用越厚：新场景只写自己的装配，管线与素材不用重做。
 
-Open the produced HTML by double-clicking it. Drag to orbit, wheel to zoom.
+怎么借、怎么拼、怎么加件：**[docs/资产复用指南.md](docs/资产复用指南.md)**。
 
-![cover](docs/cover.png)
-
----
-
-## What's in the box
+## 仓库结构
 
 ```
-kit/lib/
-  pipeline.js     one call builds the whole render stack (see below)
-  engine.js       geometry buckets + merge, inverted-hull outline, lights, rain, ripples, steam, camera
-  art.js          procedural texture atlas (canvas-drawn: wood, tile, plaster, paper, posters, glass…)
-scenes/           (empty for now: the next scene is assembled from blocks on a strict baseline)
-kit/blocks/
-  registry.js     block registry + assembly: a scene is a LIST of blocks, and each block carries a
-                  round (1 geometry / 2 procedural textures / 3 shaders & post) so it can be staged
-docs/             teardowns + notes: reference-work analysis, mechanisms, comparable open-source projects
-scripts/fetch-assets.mjs   one-command asset restore with sha256 verification
+assets/           资产包（一件一文件，机械拆出，不改写实现）
+  core/           运行时：world（世界与状态 W）· constants · canvas · math · geometry · materials · util
+  regions/        程序化贴图 63 件（canvas 画的，一张一文件）
+  props/          构件 35 件（店面 / 邻楼 / 电线杆 / 自行车 / 猫 …）
+  systems/        机制 32 件（雨三层 · 溅水 · 滴水 · 发光通道 · 地面反射 · 墨线合成 · 泛光调色 · 自动门 …）
+  scene/          场景形状与装配范例（把资产件拼回一场完整雨夜街景）
+  manifest.json   清单：部件名 / 文件 / 类别 / 行数
+kit/              装配与自检工具
+  blocks/registry.js   积木注册表 + 分轮（?step=1 几何 / 2 贴图 / 3 着色器与后处理）
+  test/*.mjs           客观自检：出画量测、亮度直方图、特效是否真生效、零外链
+tools/
+  split-assets.py      拆分器（可复跑：从基准单文件重新生成整包）
+  verify-assets.mjs    保真验证：把资产件拼回去 → 打包 → 跑起来 → 对照顶点数与报错
+docs/                  资产复用指南 · 同类开源拆解
 ```
 
-### The pipeline preset
+## 跑起来
 
-```js
-import { createWetNightApp } from '<kit>/lib/pipeline.js';
-const app = createWetNightApp({ canvas, shops, env: {...}, post: {...} });
-window.__shop = app.api;      // show / stats / parts / project / setPose / toggleBloom
+```bash
+npm install                 # three + esbuild（跑验证与打包用）
+node tools/verify-assets.mjs   # 把资产件拼回场景、打包、跑起来、对照数字
 ```
 
-Chained automatically: PMREM environment lighting → inverted-hull toon outline → planar reflection on
-the wet ground → bloom → ACES tone mapping → brightness/contrast grading → vignette → SMAA.
-Everything is parameterised via the `env` / `post` options, so a scene stays declarative.
+验证通过的样子：无 pageerror / console error，且桶顶点数与基准一致
+（`outlined 77240 · plain 44108 · cutout 320 · exteriorGlass 36 · interiorGlass 40`，场景 50 个网格）。
+**拆包改动的唯一合法理由是新增件**，不该让老件的数字变。
 
-### Procedural-first
+## 资产包的三个约定
 
-Scenes keep **no textures on disk**: every surface — roof tiles, board siding, plaster,
-paper lanterns, menus, posters, glass, wet asphalt — is painted into a canvas atlas at runtime. That
-keeps the output a single file. Real PBR/HDRI sources are available through the asset script when a
-scene wants them.
+1. **一件一文件**，函数名 = 文件名；贴图进 `regions/`，构件进 `props/`，机制进 `systems/`。
+2. **不改写件**：件是从原实现机械拆出来的，只搬移、不改逻辑；要改就新增一个件，别动老件（老件被别的场景引用着）。
+3. **状态集中在 `W`**：会被跨模块改写的绑定都放在 `assets/core/world.js` 的 `W` 里，件只通过 `W` 读写（ES 模块的具名导入是只读的，不能跨模块赋值）。
 
-### Objective self-checks (not vibes)
+## 分轮构建
 
-The `test/` scripts drive a headless browser and assert on numbers, so regressions are caught without
-a human looking at a picture:
+每个产物都能分三轮打开，一层一层判：
 
-| script | what it asserts |
+| stage | 看到什么 |
 | --- | --- |
-| `test/shots.mjs` | page errors, console errors, per-frame stats, screenshot |
-| `test/frame-check.mjs` | projected landmarks stay inside the canvas (nothing off-frame) |
-| `test/look-check.mjs` | brightness histogram: mean / p25 / p50 / p75, dead-black ratio, blown ratio, fps |
-| `test/fit-audit.mjs` | part bounding boxes: nothing floating, intended overlaps whitelisted |
-| `test/effects.mjs` | each effect (rain, ripples, steam…) measurably changes pixels — no dead code |
-| `test/compliance.mjs` | no external requests, links or inline handlers (single-file guarantee) |
+| `?step=1` | 只有几何与布局（扁平色，无贴图无后处理） |
+| `?step=2` | + 程序化贴图与描边 |
+| `?step=3` | + 着色器与后处理（默认） |
 
-### Staged rounds (geometry -> textures -> shaders)
+每一轮出图交人判，不要一口气全上。
 
-Every artefact can be opened in three stages, so each layer can be judged on its own before the next
-one is added. Append `?step=` to the URL, or use the `step` option of the app:
+## 自检不是「看着行」
 
-| step | what you see |
+| 脚本 | 断言什么 |
 | --- | --- |
-| `?step=1` | geometry and layout only (flat colours, no textures, no post) |
-| `?step=2` | + procedural canvas textures and toon outline |
-| `?step=3` | + shaders and post-processing (default) |
+| `kit/test/frame-check.mjs` | 关键点的屏幕坐标：不出画 |
+| `kit/test/look-check.mjs` | 亮度直方图：均值 / 分位 / 死黑占比 / 过曝占比 + fps |
+| `kit/test/effects.mjs` | 每个特效都能**可量测地**改变像素，否则判死代码 |
+| `kit/test/compliance.mjs` | 单文件保证：无外链、无内联事件、无外部请求 |
+| `tools/verify-assets.mjs` | 资产包拼回去后不报错、桶顶点数与基准一致 |
 
-Blocks declare their round in `kit/blocks/registry.js`; `placeBlocks()` skips any block whose round is
-above the current step. `kit/test/` ships the objective checks (screenshots, framing, brightness histogram, effect proof, compliance);
-the staged-rounds script opens all three steps and reports errors, triangles, mean and blown/dead pixel ratios.
+## 素材不进货
 
-### Assets without committing assets
-
-`assets.lock.json` lists *where to get* things (Poly Haven HDRI, ambientCG PBR sets…) with purpose and
-a sha256. `scripts/fetch-assets.mjs` re-downloads and verifies, and writes the checksum back on first
-fetch. Nothing large ever enters git history, and a fresh clone can restore the same bytes:
-
-```
-node scripts/fetch-assets.mjs               # download missing + verify
-node scripts/fetch-assets.mjs --verify-only # CI: verify only
-node scripts/fetch-assets.mjs --only paving-stones-131
-```
-
----
-
-## Roadmap
-
-- swap the planar `Reflector` for three's `SSRPass` (screen-space reflections) for correct grazing angles
-- add `GTAOPass` ambient occlusion and `LUTPass` grading
-- extract more scenes (shrine path, alley of shutters, riverside) from the same component set
+`assets.lock.json` 只记**去哪拿**（HDRI、PBR 贴图集…）与 sha256，`scripts/fetch-assets.mjs` 负责重下与校验；
+仓库里永远不放大素材本体，新克隆也能复原同样的字节。
 
 ## License
 
-Code: MIT. Fetched assets: CC0 (Poly Haven, ambientCG) — see each entry in `assets.lock.json`.
+代码 MIT。资产包是本地的机械拆解产物，文档与提交信息里不写来源。
 
 ---
 
-## 中文速览
+### English summary
 
-雨夜微缩街景工具箱：一条命令搭好整套渲染管线（环境光 → 三渲二描边 → 湿地面平面反射 →
-泛光/ACES 调色/暗角/抗锯齿），另带程序化贴图库、构件库、一个可直接双击打开的示例场景
-（日式雨夜横丁 · 居酒屋），以及一组**用数字断言**的自检脚本（构图不出画、画面不糊、特效不是摆设、
-零外链）。素材走 `assets.lock.json` + 重下脚本，仓库不存素材本体。
-```
-npm install && npm run assets && npm run build
-```
+A toolkit for building miniature diorama scenes on the web (one single-file, offline HTML, no CDN).
+The house rule: **split reusable pieces first, then assemble — do not ask an AI to generate a whole scene.**
+Pieces are verifiable (vertex counts, bounding boxes, framing measurements); generated scenes are not.
+`assets/` holds one-piece-per-file building blocks (regions / props / systems), `tools/verify-assets.mjs`
+proves a reassembled scene matches the baseline bucket counts exactly. See `docs/资产复用指南.md`.

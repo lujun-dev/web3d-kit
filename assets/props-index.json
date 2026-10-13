@@ -1,0 +1,142 @@
+{
+ "buildAcUnit": {
+  "file": "props/buildAcUnit.js",
+  "lines": 8
+ },
+ "buildAlley": {
+  "file": "props/buildAlley.js",
+  "lines": 12
+ },
+ "buildAtmCorner": {
+  "file": "props/buildAtmCorner.js",
+  "lines": 7
+ },
+ "buildBackyard": {
+  "file": "props/buildBackyard.js",
+  "lines": 53
+ },
+ "buildBentoCase": {
+  "file": "props/buildBentoCase.js",
+  "lines": 18
+ },
+ "buildBicycle": {
+  "file": "props/buildBicycle.js",
+  "lines": 60
+ },
+ "buildCat": {
+  "file": "props/buildCat.js",
+  "lines": 34
+ },
+ "buildCeilingLights": {
+  "file": "props/buildCeilingLights.js",
+  "lines": 5
+ },
+ "buildCounter": {
+  "file": "props/buildCounter.js",
+  "lines": 49
+ },
+ "buildDisplayBase": {
+  "file": "props/buildDisplayBase.js",
+  "lines": 14
+ },
+ "buildEatIn": {
+  "file": "props/buildEatIn.js",
+  "lines": 16
+ },
+ "buildFridge": {
+  "file": "props/buildFridge.js",
+  "lines": 25
+ },
+ "buildGondola": {
+  "file": "props/buildGondola.js",
+  "lines": 26
+ },
+ "buildGround": {
+  "file": "props/buildGround.js",
+  "lines": 7
+ },
+ "buildGuardrail": {
+  "file": "props/buildGuardrail.js",
+  "lines": 16
+ },
+ "buildGuardrails": {
+  "file": "props/buildGuardrails.js",
+  "lines": 8
+ },
+ "buildHangingSigns": {
+  "file": "props/buildHangingSigns.js",
+  "lines": 16
+ },
+ "buildIceFreezer": {
+  "file": "props/buildIceFreezer.js",
+  "lines": 15
+ },
+ "buildInterior": {
+  "file": "props/buildInterior.js",
+  "lines": 18
+ },
+ "buildMagazineRack": {
+  "file": "props/buildMagazineRack.js",
+  "lines": 15
+ },
+ "buildNeighbor": {
+  "file": "props/buildNeighbor.js",
+  "lines": 95
+ },
+ "buildPlanters": {
+  "file": "props/buildPlanters.js",
+  "lines": 11
+ },
+ "buildPoleSign": {
+  "file": "props/buildPoleSign.js",
+  "lines": 12
+ },
+ "buildPolesAndWires": {
+  "file": "props/buildPolesAndWires.js",
+  "lines": 26
+ },
+ "buildRoadSigns": {
+  "file": "props/buildRoadSigns.js",
+  "lines": 15
+ },
+ "buildRooftop": {
+  "file": "props/buildRooftop.js",
+  "lines": 17
+ },
+ "buildStaffCorner": {
+  "file": "props/buildStaffCorner.js",
+  "lines": 14
+ },
+ "buildStoreShell": {
+  "file": "props/buildStoreShell.js",
+  "lines": 97
+ },
+ "buildStorefrontItems": {
+  "file": "props/buildStorefrontItems.js",
+  "lines": 32
+ },
+ "buildStreetLamp": {
+  "file": "props/buildStreetLamp.js",
+  "lines": 10
+ },
+ "buildTrafficSignal": {
+  "file": "props/buildTrafficSignal.js",
+  "lines": 26
+ },
+ "buildUtilityPole": {
+  "file": "props/buildUtilityPole.js",
+  "lines": 64
+ },
+ "buildVendingArea": {
+  "file": "props/buildVendingArea.js",
+  "lines": 8
+ },
+ "buildVendingMachine": {
+  "file": "props/buildVendingMachine.js",
+  "lines": 10
+ },
+ "buildWallPosters": {
+  "file": "props/buildWallPosters.js",
+  "lines": 5
+ }
+}

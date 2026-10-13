@@ -1,0 +1,2058 @@
+{
+ "parts": [
+  {
+   "name": "LAYER_OUTLINED",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "LAYER_PLAIN",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "LAYER_GROUND",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "LAYER_EFFECTS",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "CHANNEL",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 18
+  },
+  {
+   "name": "FACE",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "LOT_Y",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "FLOOR_Y",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "BRAND",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "FONT_DISPLAY",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "FONT_ROUNDED",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "FONT_HAND",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "FONT_PLAIN",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "TEXT_SAMPLE",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 18
+  },
+  {
+   "name": "createRandomGenerator",
+   "file": "core/math.js",
+   "category": "core/math",
+   "lines": 10
+  },
+  {
+   "name": "random",
+   "file": "core/math.js",
+   "category": "core/math",
+   "lines": 1
+  },
+  {
+   "name": "randomBetween",
+   "file": "core/math.js",
+   "category": "core/math",
+   "lines": 3
+  },
+  {
+   "name": "pickRandom",
+   "file": "core/math.js",
+   "category": "core/math",
+   "lines": 3
+  },
+  {
+   "name": "hashNumber",
+   "file": "core/math.js",
+   "category": "core/math",
+   "lines": 4
+  },
+  {
+   "name": "canvasElement",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "renderer",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 6
+  },
+  {
+   "name": "hasFloatBuffers",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "hdrType",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "scene",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "backgroundColor",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "camera",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "controls",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "sharedUniforms",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 5
+  },
+  {
+   "name": "createCanvas",
+   "file": "core/canvas.js",
+   "category": "core/canvas",
+   "lines": 6
+  },
+  {
+   "name": "drawText",
+   "file": "core/canvas.js",
+   "category": "core/canvas",
+   "lines": 40
+  },
+  {
+   "name": "drawVerticalText",
+   "file": "core/canvas.js",
+   "category": "core/canvas",
+   "lines": 6
+  },
+  {
+   "name": "traceRoundedRect",
+   "file": "core/canvas.js",
+   "category": "core/canvas",
+   "lines": 10
+  },
+  {
+   "name": "fillRoundedRect",
+   "file": "core/canvas.js",
+   "category": "core/canvas",
+   "lines": 5
+  },
+  {
+   "name": "traceStar",
+   "file": "core/canvas.js",
+   "category": "core/canvas",
+   "lines": 15
+  },
+  {
+   "name": "drawStar",
+   "file": "regions/drawStar.js",
+   "category": "regions",
+   "lines": 11
+  },
+  {
+   "name": "fillCircle",
+   "file": "core/canvas.js",
+   "category": "core/canvas",
+   "lines": 6
+  },
+  {
+   "name": "fillEllipse",
+   "file": "core/canvas.js",
+   "category": "core/canvas",
+   "lines": 6
+  },
+  {
+   "name": "sprinkle",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 7
+  },
+  {
+   "name": "drawGloss",
+   "file": "regions/drawGloss.js",
+   "category": "regions",
+   "lines": 7
+  },
+  {
+   "name": "TextureAtlas",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 57
+  },
+  {
+   "name": "extendAtlasEdges",
+   "file": "core/canvas.js",
+   "category": "core/canvas",
+   "lines": 7
+  },
+  {
+   "name": "getSubRect",
+   "file": "core/canvas.js",
+   "category": "core/canvas",
+   "lines": 10
+  },
+  {
+   "name": "atlas",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "atlasRects",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "whiteRect",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 4
+  },
+  {
+   "name": "createGradientTexture",
+   "file": "core/canvas.js",
+   "category": "core/canvas",
+   "lines": 16
+  },
+  {
+   "name": "toonGradient",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 1
+  },
+  {
+   "name": "groundGradient",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 4
+  },
+  {
+   "name": "createToonMaterial",
+   "file": "core/materials.js",
+   "category": "core/materials",
+   "lines": 39
+  },
+  {
+   "name": "GLASS_VERTEX_SHADER",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 10
+  },
+  {
+   "name": "GLASS_FRAGMENT_SHADER",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 75
+  },
+  {
+   "name": "createGlassMaterial",
+   "file": "core/materials.js",
+   "category": "core/materials",
+   "lines": 14
+  },
+  {
+   "name": "colorCache",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 1
+  },
+  {
+   "name": "scratchPosition",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "scratchNormal",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "scratchNormalMatrix",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "Y_AXIS",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "defaultInterior",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "resolveColor",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 12
+  },
+  {
+   "name": "resolvePaint",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 6
+  },
+  {
+   "name": "GeometryBucket",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 78
+  },
+  {
+   "name": "buckets",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 7
+  },
+  {
+   "name": "transformStack",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "getCurrentTransform",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 3
+  },
+  {
+   "name": "withTransform",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 10
+  },
+  {
+   "name": "withInterior",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 6
+  },
+  {
+   "name": "composeMatrix",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 8
+  },
+  {
+   "name": "unitBox",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 1
+  },
+  {
+   "name": "unitPlane",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 1
+  },
+  {
+   "name": "geometryCache",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 1
+  },
+  {
+   "name": "getCachedGeometry",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 8
+  },
+  {
+   "name": "addBox",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 3
+  },
+  {
+   "name": "addBlock",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 8
+  },
+  {
+   "name": "addCylinder",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 9
+  },
+  {
+   "name": "addRod",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 16
+  },
+  {
+   "name": "addSphere",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 8
+  },
+  {
+   "name": "addMesh",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 3
+  },
+  {
+   "name": "addTube",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 8
+  },
+  {
+   "name": "PANEL_ROTATIONS",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 8
+  },
+  {
+   "name": "addPanel",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 3
+  },
+  {
+   "name": "addQuad",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 12
+  },
+  {
+   "name": "PACKAGE_PALETTE",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "PACKAGE_WORDS",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 6
+  },
+  {
+   "name": "PACKAGE_COLUMNS",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "PACKAGE_ROWS",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "packageColors",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 1
+  },
+  {
+   "name": "drawSignBand",
+   "file": "regions/drawSignBand.js",
+   "category": "regions",
+   "lines": 24
+  },
+  {
+   "name": "drawPoleSignFace",
+   "file": "regions/drawPoleSignFace.js",
+   "category": "regions",
+   "lines": 12
+  },
+  {
+   "name": "drawPoleSignSub",
+   "file": "regions/drawPoleSignSub.js",
+   "category": "regions",
+   "lines": 12
+  },
+  {
+   "name": "drawStoreFloor",
+   "file": "regions/drawStoreFloor.js",
+   "category": "regions",
+   "lines": 75
+  },
+  {
+   "name": "drawPackageFace",
+   "file": "regions/drawPackageFace.js",
+   "category": "regions",
+   "lines": 55
+  },
+  {
+   "name": "drawPackageSheet",
+   "file": "regions/drawPackageSheet.js",
+   "category": "regions",
+   "lines": 17
+  },
+  {
+   "name": "MAGAZINE_TITLES",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "drawMagazineSheet",
+   "file": "regions/drawMagazineSheet.js",
+   "category": "regions",
+   "lines": 29
+  },
+  {
+   "name": "drawDrink",
+   "file": "regions/drawDrink.js",
+   "category": "regions",
+   "lines": 33
+  },
+  {
+   "name": "BOTTLE_KINDS",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 6
+  },
+  {
+   "name": "drawBottleStrips",
+   "file": "regions/drawBottleStrips.js",
+   "category": "regions",
+   "lines": 12
+  },
+  {
+   "name": "drawFridgeHeader",
+   "file": "regions/drawFridgeHeader.js",
+   "category": "regions",
+   "lines": 14
+  },
+  {
+   "name": "drawBentoSheet",
+   "file": "regions/drawBentoSheet.js",
+   "category": "regions",
+   "lines": 63
+  },
+  {
+   "name": "CATEGORY_SIGNS",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 8
+  },
+  {
+   "name": "drawCategorySigns",
+   "file": "regions/drawCategorySigns.js",
+   "category": "regions",
+   "lines": 11
+  },
+  {
+   "name": "drawPosterFrame",
+   "file": "regions/drawPosterFrame.js",
+   "category": "regions",
+   "lines": 5
+  },
+  {
+   "name": "drawWindowPosters",
+   "file": "regions/drawWindowPosters.js",
+   "category": "regions",
+   "lines": 73
+  },
+  {
+   "name": "drawWallPosters",
+   "file": "regions/drawWallPosters.js",
+   "category": "regions",
+   "lines": 56
+  },
+  {
+   "name": "drawVendingFront",
+   "file": "regions/drawVendingFront.js",
+   "category": "regions",
+   "lines": 54
+  },
+  {
+   "name": "drawDoorMat",
+   "file": "regions/drawDoorMat.js",
+   "category": "regions",
+   "lines": 10
+  },
+  {
+   "name": "drawCigaretteShelf",
+   "file": "regions/drawCigaretteShelf.js",
+   "category": "regions",
+   "lines": 24
+  },
+  {
+   "name": "drawCounterFront",
+   "file": "regions/drawCounterFront.js",
+   "category": "regions",
+   "lines": 12
+  },
+  {
+   "name": "drawHotSnackTray",
+   "file": "regions/drawHotSnackTray.js",
+   "category": "regions",
+   "lines": 21
+  },
+  {
+   "name": "drawOdenTop",
+   "file": "regions/drawOdenTop.js",
+   "category": "regions",
+   "lines": 44
+  },
+  {
+   "name": "drawNikumanFront",
+   "file": "regions/drawNikumanFront.js",
+   "category": "regions",
+   "lines": 19
+  },
+  {
+   "name": "drawMenuBoard",
+   "file": "regions/drawMenuBoard.js",
+   "category": "regions",
+   "lines": 17
+  },
+  {
+   "name": "drawCoffeeMachine",
+   "file": "regions/drawCoffeeMachine.js",
+   "category": "regions",
+   "lines": 17
+  },
+  {
+   "name": "drawAtm",
+   "file": "regions/drawAtm.js",
+   "category": "regions",
+   "lines": 17
+  },
+  {
+   "name": "drawCopier",
+   "file": "regions/drawCopier.js",
+   "category": "regions",
+   "lines": 13
+  },
+  {
+   "name": "drawStaffSign",
+   "file": "regions/drawStaffSign.js",
+   "category": "regions",
+   "lines": 6
+  },
+  {
+   "name": "drawPoleGuard",
+   "file": "regions/drawPoleGuard.js",
+   "category": "regions",
+   "lines": 14
+  },
+  {
+   "name": "drawPoleAd",
+   "file": "regions/drawPoleAd.js",
+   "category": "regions",
+   "lines": 16
+  },
+  {
+   "name": "drawAddressPlate",
+   "file": "regions/drawAddressPlate.js",
+   "category": "regions",
+   "lines": 8
+  },
+  {
+   "name": "drawStopSign",
+   "file": "regions/drawStopSign.js",
+   "category": "regions",
+   "lines": 18
+  },
+  {
+   "name": "drawSignBack",
+   "file": "regions/drawSignBack.js",
+   "category": "regions",
+   "lines": 10
+  },
+  {
+   "name": "drawCrosswalkSign",
+   "file": "regions/drawCrosswalkSign.js",
+   "category": "regions",
+   "lines": 33
+  },
+  {
+   "name": "drawStreetName",
+   "file": "regions/drawStreetName.js",
+   "category": "regions",
+   "lines": 8
+  },
+  {
+   "name": "drawBulletinBoard",
+   "file": "regions/drawBulletinBoard.js",
+   "category": "regions",
+   "lines": 49
+  },
+  {
+   "name": "drawNeighborSign",
+   "file": "regions/drawNeighborSign.js",
+   "category": "regions",
+   "lines": 9
+  },
+  {
+   "name": "drawShutter",
+   "file": "regions/drawShutter.js",
+   "category": "regions",
+   "lines": 24
+  },
+  {
+   "name": "drawBlockWall",
+   "file": "regions/drawBlockWall.js",
+   "category": "regions",
+   "lines": 22
+  },
+  {
+   "name": "drawRoofTiles",
+   "file": "regions/drawRoofTiles.js",
+   "category": "regions",
+   "lines": 16
+  },
+  {
+   "name": "drawIceCreamTop",
+   "file": "regions/drawIceCreamTop.js",
+   "category": "regions",
+   "lines": 22
+  },
+  {
+   "name": "drawFreezerLabel",
+   "file": "regions/drawFreezerLabel.js",
+   "category": "regions",
+   "lines": 9
+  },
+  {
+   "name": "drawWalkSignal",
+   "file": "regions/drawWalkSignal.js",
+   "category": "regions",
+   "lines": 35
+  },
+  {
+   "name": "drawCurtainWindow",
+   "file": "regions/drawCurtainWindow.js",
+   "category": "regions",
+   "lines": 23
+  },
+  {
+   "name": "drawBasketGrid",
+   "file": "regions/drawBasketGrid.js",
+   "category": "regions",
+   "lines": 19
+  },
+  {
+   "name": "drawSpokes",
+   "file": "regions/drawSpokes.js",
+   "category": "regions",
+   "lines": 15
+  },
+  {
+   "name": "drawSticker",
+   "file": "regions/drawSticker.js",
+   "category": "regions",
+   "lines": 4
+  },
+  {
+   "name": "drawOpenSign",
+   "file": "regions/drawOpenSign.js",
+   "category": "regions",
+   "lines": 9
+  },
+  {
+   "name": "drawAcFace",
+   "file": "regions/drawAcFace.js",
+   "category": "regions",
+   "lines": 11
+  },
+  {
+   "name": "drawAcGrill",
+   "file": "regions/drawAcGrill.js",
+   "category": "regions",
+   "lines": 16
+  },
+  {
+   "name": "drawTrashLabels",
+   "file": "regions/drawTrashLabels.js",
+   "category": "regions",
+   "lines": 21
+  },
+  {
+   "name": "drawRecycleLabel",
+   "file": "regions/drawRecycleLabel.js",
+   "category": "regions",
+   "lines": 8
+  },
+  {
+   "name": "drawWetFloorSign",
+   "file": "regions/drawWetFloorSign.js",
+   "category": "regions",
+   "lines": 16
+  },
+  {
+   "name": "drawPlaque",
+   "file": "regions/drawPlaque.js",
+   "category": "regions",
+   "lines": 13
+  },
+  {
+   "name": "drawStrata",
+   "file": "regions/drawStrata.js",
+   "category": "regions",
+   "lines": 14
+  },
+  {
+   "name": "drawRoofSurface",
+   "file": "regions/drawRoofSurface.js",
+   "category": "regions",
+   "lines": 16
+  },
+  {
+   "name": "drawClock",
+   "file": "regions/drawClock.js",
+   "category": "regions",
+   "lines": 26
+  },
+  {
+   "name": "drawPriceStrip",
+   "file": "regions/drawPriceStrip.js",
+   "category": "regions",
+   "lines": 10
+  },
+  {
+   "name": "drawCaseSign",
+   "file": "regions/drawCaseSign.js",
+   "category": "regions",
+   "lines": 8
+  },
+  {
+   "name": "drawPopSigns",
+   "file": "regions/drawPopSigns.js",
+   "category": "regions",
+   "lines": 20
+  },
+  {
+   "name": "drawSmallLabel",
+   "file": "regions/drawSmallLabel.js",
+   "category": "regions",
+   "lines": 5
+  },
+  {
+   "name": "registerAtlasRegions",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 100
+  },
+  {
+   "name": "GROUND_SIZE",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "GROUND_SCALE",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "WET_SIZE",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "WET_SCALE",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "toGroundX",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 3
+  },
+  {
+   "name": "toGroundY",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 3
+  },
+  {
+   "name": "fillGroundRect",
+   "file": "core/canvas.js",
+   "category": "core/canvas",
+   "lines": 4
+  },
+  {
+   "name": "drawPavers",
+   "file": "core/canvas.js",
+   "category": "core/canvas",
+   "lines": 26
+  },
+  {
+   "name": "drawTactilePaving",
+   "file": "core/canvas.js",
+   "category": "core/canvas",
+   "lines": 14
+  },
+  {
+   "name": "drawGrate",
+   "file": "core/canvas.js",
+   "category": "core/canvas",
+   "lines": 21
+  },
+  {
+   "name": "drawManhole",
+   "file": "regions/drawManhole.js",
+   "category": "regions",
+   "lines": 24
+  },
+  {
+   "name": "drawDiamondMarking",
+   "file": "core/canvas.js",
+   "category": "core/canvas",
+   "lines": 22
+  },
+  {
+   "name": "fillCornerOutside",
+   "file": "core/canvas.js",
+   "category": "core/canvas",
+   "lines": 12
+  },
+  {
+   "name": "strokeGroundArc",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 7
+  },
+  {
+   "name": "drawGroundAlbedo",
+   "file": "scene/index.js",
+   "category": "scene",
+   "lines": 182
+  },
+  {
+   "name": "PUDDLES",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 20
+  },
+  {
+   "name": "toWetX",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 3
+  },
+  {
+   "name": "toWetY",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 3
+  },
+  {
+   "name": "addWetBlob",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 14
+  },
+  {
+   "name": "drawWetMask",
+   "file": "scene/index.js",
+   "category": "scene",
+   "lines": 34
+  },
+  {
+   "name": "createLotShape",
+   "file": "scene/index.js",
+   "category": "scene",
+   "lines": 10
+  },
+  {
+   "name": "createFarRightShape",
+   "file": "scene/index.js",
+   "category": "scene",
+   "lines": 10
+  },
+  {
+   "name": "createFarFrontShape",
+   "file": "scene/index.js",
+   "category": "scene",
+   "lines": 9
+  },
+  {
+   "name": "createGroundGeometry",
+   "file": "scene/index.js",
+   "category": "scene",
+   "lines": 24
+  },
+  {
+   "name": "GROUND_FRAGMENT_HEADER",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 37
+  },
+  {
+   "name": "GROUND_FRAGMENT_BODY",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 33
+  },
+  {
+   "name": "createGroundMaterial",
+   "file": "core/materials.js",
+   "category": "core/materials",
+   "lines": 19
+  },
+  {
+   "name": "COLORS",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 10
+  },
+  {
+   "name": "SHRUB_COLORS",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "HYDRANGEA_COLORS",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "withMatrix",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 5
+  },
+  {
+   "name": "buildDisplayBase",
+   "file": "props/buildDisplayBase.js",
+   "category": "props",
+   "lines": 14
+  },
+  {
+   "name": "buildGround",
+   "file": "props/buildGround.js",
+   "category": "props",
+   "lines": 7
+  },
+  {
+   "name": "buildStoreShell",
+   "file": "props/buildStoreShell.js",
+   "category": "props",
+   "lines": 97
+  },
+  {
+   "name": "PRODUCT_CATEGORIES",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 6
+  },
+  {
+   "name": "getFrontFace",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 12
+  },
+  {
+   "name": "placeProducts",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 29
+  },
+  {
+   "name": "createRoundedTriangleShape",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 19
+  },
+  {
+   "name": "createTriangleProduct",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 9
+  },
+  {
+   "name": "fillCaseTier",
+   "file": "core/canvas.js",
+   "category": "core/canvas",
+   "lines": 44
+  },
+  {
+   "name": "buildCeilingLights",
+   "file": "props/buildCeilingLights.js",
+   "category": "props",
+   "lines": 5
+  },
+  {
+   "name": "buildFridge",
+   "file": "props/buildFridge.js",
+   "category": "props",
+   "lines": 25
+  },
+  {
+   "name": "buildBentoCase",
+   "file": "props/buildBentoCase.js",
+   "category": "props",
+   "lines": 18
+  },
+  {
+   "name": "buildAtmCorner",
+   "file": "props/buildAtmCorner.js",
+   "category": "props",
+   "lines": 7
+  },
+  {
+   "name": "buildMagazineRack",
+   "file": "props/buildMagazineRack.js",
+   "category": "props",
+   "lines": 15
+  },
+  {
+   "name": "buildGondola",
+   "file": "props/buildGondola.js",
+   "category": "props",
+   "lines": 26
+  },
+  {
+   "name": "buildIceFreezer",
+   "file": "props/buildIceFreezer.js",
+   "category": "props",
+   "lines": 15
+  },
+  {
+   "name": "buildCounter",
+   "file": "props/buildCounter.js",
+   "category": "props",
+   "lines": 49
+  },
+  {
+   "name": "buildEatIn",
+   "file": "props/buildEatIn.js",
+   "category": "props",
+   "lines": 16
+  },
+  {
+   "name": "buildHangingSigns",
+   "file": "props/buildHangingSigns.js",
+   "category": "props",
+   "lines": 16
+  },
+  {
+   "name": "buildStaffCorner",
+   "file": "props/buildStaffCorner.js",
+   "category": "props",
+   "lines": 14
+  },
+  {
+   "name": "buildWallPosters",
+   "file": "props/buildWallPosters.js",
+   "category": "props",
+   "lines": 5
+  },
+  {
+   "name": "buildInterior",
+   "file": "props/buildInterior.js",
+   "category": "props",
+   "lines": 18
+  },
+  {
+   "name": "fans",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "materials",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "catTail",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "catTailBaseRotation",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "getClosedUmbrellaGeometry",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 12
+  },
+  {
+   "name": "addUmbrella",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 16
+  },
+  {
+   "name": "buildStorefrontItems",
+   "file": "props/buildStorefrontItems.js",
+   "category": "props",
+   "lines": 32
+  },
+  {
+   "name": "buildPoleSign",
+   "file": "props/buildPoleSign.js",
+   "category": "props",
+   "lines": 12
+  },
+  {
+   "name": "buildVendingMachine",
+   "file": "props/buildVendingMachine.js",
+   "category": "props",
+   "lines": 10
+  },
+  {
+   "name": "buildVendingArea",
+   "file": "props/buildVendingArea.js",
+   "category": "props",
+   "lines": 8
+  },
+  {
+   "name": "buildBicycle",
+   "file": "props/buildBicycle.js",
+   "category": "props",
+   "lines": 60
+  },
+  {
+   "name": "buildCat",
+   "file": "props/buildCat.js",
+   "category": "props",
+   "lines": 34
+  },
+  {
+   "name": "buildStreetLamp",
+   "file": "props/buildStreetLamp.js",
+   "category": "props",
+   "lines": 10
+  },
+  {
+   "name": "buildUtilityPole",
+   "file": "props/buildUtilityPole.js",
+   "category": "props",
+   "lines": 64
+  },
+  {
+   "name": "addWire",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 12
+  },
+  {
+   "name": "getLeftPerpendicular",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 4
+  },
+  {
+   "name": "buildPolesAndWires",
+   "file": "props/buildPolesAndWires.js",
+   "category": "props",
+   "lines": 26
+  },
+  {
+   "name": "buildTrafficSignal",
+   "file": "props/buildTrafficSignal.js",
+   "category": "props",
+   "lines": 26
+  },
+  {
+   "name": "buildRoadSigns",
+   "file": "props/buildRoadSigns.js",
+   "category": "props",
+   "lines": 15
+  },
+  {
+   "name": "buildGuardrail",
+   "file": "props/buildGuardrail.js",
+   "category": "props",
+   "lines": 16
+  },
+  {
+   "name": "buildGuardrails",
+   "file": "props/buildGuardrails.js",
+   "category": "props",
+   "lines": 8
+  },
+  {
+   "name": "addShrub",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 8
+  },
+  {
+   "name": "buildPlanters",
+   "file": "props/buildPlanters.js",
+   "category": "props",
+   "lines": 11
+  },
+  {
+   "name": "createFanMesh",
+   "file": "systems/createFanMesh.js",
+   "category": "systems",
+   "lines": 11
+  },
+  {
+   "name": "registerFan",
+   "file": "systems/registerFan.js",
+   "category": "systems",
+   "lines": 10
+  },
+  {
+   "name": "buildAcUnit",
+   "file": "props/buildAcUnit.js",
+   "category": "props",
+   "lines": 8
+  },
+  {
+   "name": "buildNeighbor",
+   "file": "props/buildNeighbor.js",
+   "category": "props",
+   "lines": 95
+  },
+  {
+   "name": "buildAlley",
+   "file": "props/buildAlley.js",
+   "category": "props",
+   "lines": 12
+  },
+  {
+   "name": "buildBackyard",
+   "file": "props/buildBackyard.js",
+   "category": "props",
+   "lines": 53
+  },
+  {
+   "name": "buildRooftop",
+   "file": "props/buildRooftop.js",
+   "category": "props",
+   "lines": 17
+  },
+  {
+   "name": "door",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "lights",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "createDoorPanel",
+   "file": "systems/createDoorPanel.js",
+   "category": "systems",
+   "lines": 25
+  },
+  {
+   "name": "createDoors",
+   "file": "systems/createDoors.js",
+   "category": "systems",
+   "lines": 4
+  },
+  {
+   "name": "updateDoor",
+   "file": "systems/updateDoor.js",
+   "category": "systems",
+   "lines": 36
+  },
+  {
+   "name": "createSpotLight",
+   "file": "core/materials.js",
+   "category": "core/materials",
+   "lines": 17
+  },
+  {
+   "name": "createPointLight",
+   "file": "core/materials.js",
+   "category": "core/materials",
+   "lines": 7
+  },
+  {
+   "name": "createLights",
+   "file": "systems/createLights.js",
+   "category": "systems",
+   "lines": 19
+  },
+  {
+   "name": "SIGNAL_COLORS",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 5
+  },
+  {
+   "name": "getSignalState",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 10
+  },
+  {
+   "name": "computeStoreSignLevel",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 10
+  },
+  {
+   "name": "computeFailingTubeLevel",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 7
+  },
+  {
+   "name": "computeSecurityLevel",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 7
+  },
+  {
+   "name": "computeHangingSignLevel",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 7
+  },
+  {
+   "name": "computeTelevisionLevel",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 7
+  },
+  {
+   "name": "updateChannels",
+   "file": "systems/updateChannels.js",
+   "category": "systems",
+   "lines": 30
+  },
+  {
+   "name": "rainLights",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 9
+  },
+  {
+   "name": "rainLightUniforms",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 8
+  },
+  {
+   "name": "LIGHT_TINT_CHUNK",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 12
+  },
+  {
+   "name": "createQuadGeometry",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 11
+  },
+  {
+   "name": "addEffectMesh",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 7
+  },
+  {
+   "name": "createRain",
+   "file": "systems/createRain.js",
+   "category": "systems",
+   "lines": 82
+  },
+  {
+   "name": "SPLASH_COUNT",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "SPLASH_EXTRA",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "SPLASH_LIFE",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 1
+  },
+  {
+   "name": "SPLASH_SURFACES",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 14
+  },
+  {
+   "name": "splashState",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "respawnSplash",
+   "file": "systems/respawnSplash.js",
+   "category": "systems",
+   "lines": 14
+  },
+  {
+   "name": "triggerSplash",
+   "file": "systems/triggerSplash.js",
+   "category": "systems",
+   "lines": 8
+  },
+  {
+   "name": "createSplashes",
+   "file": "systems/createSplashes.js",
+   "category": "systems",
+   "lines": 68
+  },
+  {
+   "name": "updateSplashes",
+   "file": "systems/updateSplashes.js",
+   "category": "systems",
+   "lines": 10
+  },
+  {
+   "name": "dripSources",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 1
+  },
+  {
+   "name": "dripState",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "addDripSource",
+   "file": "systems/addDripSource.js",
+   "category": "systems",
+   "lines": 3
+  },
+  {
+   "name": "registerDripSources",
+   "file": "systems/registerDripSources.js",
+   "category": "systems",
+   "lines": 23
+  },
+  {
+   "name": "createDrips",
+   "file": "systems/createDrips.js",
+   "category": "systems",
+   "lines": 50
+  },
+  {
+   "name": "updateDrips",
+   "file": "systems/updateDrips.js",
+   "category": "systems",
+   "lines": 35
+  },
+  {
+   "name": "overflowStream",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "createOverflowStream",
+   "file": "systems/createOverflowStream.js",
+   "category": "systems",
+   "lines": 42
+  },
+  {
+   "name": "updateOverflowStream",
+   "file": "systems/updateOverflowStream.js",
+   "category": "systems",
+   "lines": 6
+  },
+  {
+   "name": "createSteam",
+   "file": "systems/createSteam.js",
+   "category": "systems",
+   "lines": 47
+  },
+  {
+   "name": "createLightCone",
+   "file": "core/materials.js",
+   "category": "core/materials",
+   "lines": 46
+  },
+  {
+   "name": "createBaseShadow",
+   "file": "systems/createBaseShadow.js",
+   "category": "systems",
+   "lines": 16
+  },
+  {
+   "name": "createBackgroundTexture",
+   "file": "core/materials.js",
+   "category": "core/materials",
+   "lines": 18
+  },
+  {
+   "name": "createEffects",
+   "file": "systems/createEffects.js",
+   "category": "systems",
+   "lines": 16
+  },
+  {
+   "name": "updateFans",
+   "file": "systems/updateFans.js",
+   "category": "systems",
+   "lines": 5
+  },
+  {
+   "name": "updateCat",
+   "file": "systems/updateCat.js",
+   "category": "systems",
+   "lines": 6
+  },
+  {
+   "name": "sceneTarget",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "normalTarget",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 5
+  },
+  {
+   "name": "compositeTarget",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "gradeTarget",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "reflectionTarget",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 6
+  },
+  {
+   "name": "reflectionMatrix",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 1
+  },
+  {
+   "name": "reflectionCamera",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 1
+  },
+  {
+   "name": "normalClearColor",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "blackColor",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "backgroundTexture",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "FULLSCREEN_VERTEX_SHADER",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 7
+  },
+  {
+   "name": "normalPassMaterial",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 26
+  },
+  {
+   "name": "compositeMaterial",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 62
+  },
+  {
+   "name": "gradeMaterial",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 57
+  },
+  {
+   "name": "fxaaMaterial",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 7
+  },
+  {
+   "name": "compositeQuad",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "gradeQuad",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "fxaaQuad",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "bloomPass",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "reflectionScratch",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 9
+  },
+  {
+   "name": "updateReflectionCamera",
+   "file": "systems/updateReflectionCamera.js",
+   "category": "systems",
+   "lines": 34
+  },
+  {
+   "name": "renderFrame",
+   "file": "systems/renderFrame.js",
+   "category": "systems",
+   "lines": 40
+  },
+  {
+   "name": "viewportWidth",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "viewportHeight",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "qualityScale",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "computePixelRatio",
+   "file": "core/math.js",
+   "category": "core/math",
+   "lines": 5
+  },
+  {
+   "name": "handleResize",
+   "file": "systems/handleResize.js",
+   "category": "systems",
+   "lines": 23
+  },
+  {
+   "name": "placeInitialCamera",
+   "file": "systems/placeInitialCamera.js",
+   "category": "systems",
+   "lines": 13
+  },
+  {
+   "name": "performanceMonitor",
+   "file": "core/util.js",
+   "category": "core/util",
+   "lines": 1
+  },
+  {
+   "name": "trackPerformance",
+   "file": "systems/trackPerformance.js",
+   "category": "systems",
+   "lines": 24
+  },
+  {
+   "name": "clock",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "elapsedTime",
+   "file": "core/world.js",
+   "category": "core/world",
+   "lines": 1
+  },
+  {
+   "name": "animate",
+   "file": "systems/animate.js",
+   "category": "systems",
+   "lines": 15
+  },
+  {
+   "name": "waitFor",
+   "file": "systems/waitFor.js",
+   "category": "systems",
+   "lines": 5
+  },
+  {
+   "name": "FONT_STYLESHEETS",
+   "file": "core/constants.js",
+   "category": "core/constants",
+   "lines": 5
+  },
+  {
+   "name": "loadStylesheet",
+   "file": "systems/loadStylesheet.js",
+   "category": "systems",
+   "lines": 14
+  },
+  {
+   "name": "waitForFonts",
+   "file": "systems/waitForFonts.js",
+   "category": "systems",
+   "lines": 20
+  },
+  {
+   "name": "finalizeBuckets",
+   "file": "core/geometry.js",
+   "category": "core/geometry",
+   "lines": 19
+  },
+  {
+   "name": "initialize",
+   "file": "scene/index.js",
+   "category": "scene",
+   "lines": 43
+  }
+ ],
+ "counts": {
+  "core/canvas.js": 18,
+  "core/constants.js": 43,
+  "core/geometry.js": 23,
+  "core/materials.js": 7,
+  "core/math.js": 6,
+  "core/util.js": 34,
+  "core/world.js": 92,
+  "props/buildAcUnit.js": 1,
+  "props/buildAlley.js": 1,
+  "props/buildAtmCorner.js": 1,
+  "props/buildBackyard.js": 1,
+  "props/buildBentoCase.js": 1,
+  "props/buildBicycle.js": 1,
+  "props/buildCat.js": 1,
+  "props/buildCeilingLights.js": 1,
+  "props/buildCounter.js": 1,
+  "props/buildDisplayBase.js": 1,
+  "props/buildEatIn.js": 1,
+  "props/buildFridge.js": 1,
+  "props/buildGondola.js": 1,
+  "props/buildGround.js": 1,
+  "props/buildGuardrail.js": 1,
+  "props/buildGuardrails.js": 1,
+  "props/buildHangingSigns.js": 1,
+  "props/buildIceFreezer.js": 1,
+  "props/buildInterior.js": 1,
+  "props/buildMagazineRack.js": 1,
+  "props/buildNeighbor.js": 1,
+  "props/buildPlanters.js": 1,
+  "props/buildPoleSign.js": 1,
+  "props/buildPolesAndWires.js": 1,
+  "props/buildRoadSigns.js": 1,
+  "props/buildRooftop.js": 1,
+  "props/buildStaffCorner.js": 1,
+  "props/buildStoreShell.js": 1,
+  "props/buildStorefrontItems.js": 1,
+  "props/buildStreetLamp.js": 1,
+  "props/buildTrafficSignal.js": 1,
+  "props/buildUtilityPole.js": 1,
+  "props/buildVendingArea.js": 1,
+  "props/buildVendingMachine.js": 1,
+  "props/buildWallPosters.js": 1,
+  "regions/drawAcFace.js": 1,
+  "regions/drawAcGrill.js": 1,
+  "regions/drawAddressPlate.js": 1,
+  "regions/drawAtm.js": 1,
+  "regions/drawBasketGrid.js": 1,
+  "regions/drawBentoSheet.js": 1,
+  "regions/drawBlockWall.js": 1,
+  "regions/drawBottleStrips.js": 1,
+  "regions/drawBulletinBoard.js": 1,
+  "regions/drawCaseSign.js": 1,
+  "regions/drawCategorySigns.js": 1,
+  "regions/drawCigaretteShelf.js": 1,
+  "regions/drawClock.js": 1,
+  "regions/drawCoffeeMachine.js": 1,
+  "regions/drawCopier.js": 1,
+  "regions/drawCounterFront.js": 1,
+  "regions/drawCrosswalkSign.js": 1,
+  "regions/drawCurtainWindow.js": 1,
+  "regions/drawDoorMat.js": 1,
+  "regions/drawDrink.js": 1,
+  "regions/drawFreezerLabel.js": 1,
+  "regions/drawFridgeHeader.js": 1,
+  "regions/drawGloss.js": 1,
+  "regions/drawHotSnackTray.js": 1,
+  "regions/drawIceCreamTop.js": 1,
+  "regions/drawMagazineSheet.js": 1,
+  "regions/drawManhole.js": 1,
+  "regions/drawMenuBoard.js": 1,
+  "regions/drawNeighborSign.js": 1,
+  "regions/drawNikumanFront.js": 1,
+  "regions/drawOdenTop.js": 1,
+  "regions/drawOpenSign.js": 1,
+  "regions/drawPackageFace.js": 1,
+  "regions/drawPackageSheet.js": 1,
+  "regions/drawPlaque.js": 1,
+  "regions/drawPoleAd.js": 1,
+  "regions/drawPoleGuard.js": 1,
+  "regions/drawPoleSignFace.js": 1,
+  "regions/drawPoleSignSub.js": 1,
+  "regions/drawPopSigns.js": 1,
+  "regions/drawPosterFrame.js": 1,
+  "regions/drawPriceStrip.js": 1,
+  "regions/drawRecycleLabel.js": 1,
+  "regions/drawRoofSurface.js": 1,
+  "regions/drawRoofTiles.js": 1,
+  "regions/drawShutter.js": 1,
+  "regions/drawSignBack.js": 1,
+  "regions/drawSignBand.js": 1,
+  "regions/drawSmallLabel.js": 1,
+  "regions/drawSpokes.js": 1,
+  "regions/drawStaffSign.js": 1,
+  "regions/drawStar.js": 1,
+  "regions/drawSticker.js": 1,
+  "regions/drawStopSign.js": 1,
+  "regions/drawStoreFloor.js": 1,
+  "regions/drawStrata.js": 1,
+  "regions/drawStreetName.js": 1,
+  "regions/drawTrashLabels.js": 1,
+  "regions/drawVendingFront.js": 1,
+  "regions/drawWalkSignal.js": 1,
+  "regions/drawWallPosters.js": 1,
+  "regions/drawWetFloorSign.js": 1,
+  "regions/drawWindowPosters.js": 1,
+  "scene/index.js": 7,
+  "systems/addDripSource.js": 1,
+  "systems/animate.js": 1,
+  "systems/createBaseShadow.js": 1,
+  "systems/createDoorPanel.js": 1,
+  "systems/createDoors.js": 1,
+  "systems/createDrips.js": 1,
+  "systems/createEffects.js": 1,
+  "systems/createFanMesh.js": 1,
+  "systems/createLights.js": 1,
+  "systems/createOverflowStream.js": 1,
+  "systems/createRain.js": 1,
+  "systems/createSplashes.js": 1,
+  "systems/createSteam.js": 1,
+  "systems/handleResize.js": 1,
+  "systems/loadStylesheet.js": 1,
+  "systems/placeInitialCamera.js": 1,
+  "systems/registerDripSources.js": 1,
+  "systems/registerFan.js": 1,
+  "systems/renderFrame.js": 1,
+  "systems/respawnSplash.js": 1,
+  "systems/trackPerformance.js": 1,
+  "systems/triggerSplash.js": 1,
+  "systems/updateCat.js": 1,
+  "systems/updateChannels.js": 1,
+  "systems/updateDoor.js": 1,
+  "systems/updateDrips.js": 1,
+  "systems/updateFans.js": 1,
+  "systems/updateOverflowStream.js": 1,
+  "systems/updateReflectionCamera.js": 1,
+  "systems/updateSplashes.js": 1,
+  "systems/waitFor.js": 1,
+  "systems/waitForFonts.js": 1
+ }
+}

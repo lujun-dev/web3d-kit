@@ -1,7 +1,7 @@
 node_modules/
 dist/
-scenes/*/build/app.js
-scenes/*/shots/
-assets/*
-!assets/.gitkeep
 *.log
+
+# 下载来的大素材本体不进仓库（只存 assets.lock.json + 重下脚本）
+assets/hdri/
+assets/textures/

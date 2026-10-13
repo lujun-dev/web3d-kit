@@ -1,7 +1,11 @@
 /* kit · 积木注册表：把整个场景拆成一堆可复用块，按清单拼装
    块定义：{ id, round(1几何/2贴图/3着色器), tags[], build(bk, opts) → void | { group?, animate? } }
    场景写法：placeBlocks(bk, group, [{ id: 'cn/rock', at: [x, z], opts: {...} }, 'cn/base']) */
-import { currentStage } from '../lib/engine.js';
+/* 分轮：读 URL 的 ?step=（1 几何 / 2 贴图 / 3 着色器与后处理），默认 3 */
+export function currentStage() {
+  const raw = Number(new URLSearchParams(location.search).get('step') || 3);
+  return Number.isFinite(raw) ? Math.min(3, Math.max(1, raw)) : 3;
+}
 
 export const BLOCKS = new Map();
 

@@ -1,0 +1,464 @@
+{
+ "acFace": {
+  "region": "AcFace",
+  "size": [
+   256,
+   192
+  ]
+ },
+ "acGrill": {
+  "region": "AcGrill",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "addressPlate": {
+  "region": "AddressPlate",
+  "size": [
+   192,
+   64
+  ]
+ },
+ "atm": {
+  "region": "Atm",
+  "size": [
+   128,
+   256
+  ]
+ },
+ "atmSticker": {
+  "region": "Sticker",
+  "size": [
+   128,
+   64
+  ]
+ },
+ "autoDoorSticker": {
+  "region": "Sticker",
+  "size": [
+   256,
+   64
+  ]
+ },
+ "basket": {
+  "region": "BasketGrid",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "bento": {
+  "region": "BentoSheet",
+  "size": [
+   512,
+   256
+  ]
+ },
+ "blockWall": {
+  "region": "BlockWall",
+  "size": [
+   256,
+   192
+  ]
+ },
+ "bottles": {
+  "region": "BottleStrips",
+  "size": [
+   512,
+   512
+  ]
+ },
+ "bulletin": {
+  "region": "BulletinBoard",
+  "size": [
+   512,
+   320
+  ]
+ },
+ "caseSign": {
+  "region": "CaseSign",
+  "size": [
+   512,
+   64
+  ]
+ },
+ "categorySigns": {
+  "region": "CategorySigns",
+  "size": [
+   256,
+   384
+  ]
+ },
+ "cigarettes": {
+  "region": "CigaretteShelf",
+  "size": [
+   512,
+   224
+  ]
+ },
+ "clock": {
+  "region": "Clock",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "coffeeMachine": {
+  "region": "CoffeeMachine",
+  "size": [
+   128,
+   192
+  ]
+ },
+ "copier": {
+  "region": "Copier",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "counterFront": {
+  "region": "CounterFront",
+  "size": [
+   512,
+   128
+  ]
+ },
+ "crosswalkSign": {
+  "region": "CrosswalkSign",
+  "size": [
+   192,
+   192
+  ]
+ },
+ "curtainWindow": {
+  "region": "CurtainWindow",
+  "size": [
+   256,
+   160
+  ]
+ },
+ "doorMat": {
+  "region": "DoorMat",
+  "size": [
+   256,
+   160
+  ]
+ },
+ "eatInSticker": {
+  "region": "Sticker",
+  "size": [
+   192,
+   64
+  ]
+ },
+ "freezerLabel": {
+  "region": "FreezerLabel",
+  "size": [
+   256,
+   64
+  ]
+ },
+ "fridgeHeader": {
+  "region": "FridgeHeader",
+  "size": [
+   1024,
+   96
+  ]
+ },
+ "hotSnack": {
+  "region": "HotSnackTray",
+  "size": [
+   256,
+   128
+  ]
+ },
+ "hotSnackLabel": {
+  "region": "SmallLabel",
+  "size": [
+   192,
+   40
+  ]
+ },
+ "iceCream": {
+  "region": "IceCreamTop",
+  "size": [
+   128,
+   192
+  ]
+ },
+ "magazines": {
+  "region": "MagazineSheet",
+  "size": [
+   512,
+   344
+  ]
+ },
+ "menuBoard": {
+  "region": "MenuBoard",
+  "size": [
+   512,
+   136
+  ]
+ },
+ "neighborSign": {
+  "region": "NeighborSign",
+  "size": [
+   512,
+   70
+  ]
+ },
+ "nikuman": {
+  "region": "NikumanFront",
+  "size": [
+   256,
+   128
+  ]
+ },
+ "oden": {
+  "region": "OdenTop",
+  "size": [
+   192,
+   192
+  ]
+ },
+ "openSign": {
+  "region": "OpenSign",
+  "size": [
+   256,
+   96
+  ]
+ },
+ "packages": {
+  "region": "PackageSheet",
+  "size": [
+   1024,
+   384
+  ]
+ },
+ "plaque": {
+  "region": "Plaque",
+  "size": [
+   512,
+   96
+  ]
+ },
+ "poleAdDentist": {
+  "region": "PoleAd",
+  "size": [
+   72,
+   288
+  ]
+ },
+ "poleAdRealty": {
+  "region": "PoleAd",
+  "size": [
+   72,
+   288
+  ]
+ },
+ "poleGuard": {
+  "region": "PoleGuard",
+  "size": [
+   64,
+   256
+  ]
+ },
+ "poleSignFace": {
+  "region": "PoleSignFace",
+  "size": [
+   512,
+   512
+  ]
+ },
+ "poleSignSub": {
+  "region": "PoleSignSub",
+  "size": [
+   512,
+   160
+  ]
+ },
+ "popSigns": {
+  "region": "PopSigns",
+  "size": [
+   640,
+   64
+  ]
+ },
+ "priceStrip": {
+  "region": "PriceStrip",
+  "size": [
+   256,
+   24
+  ]
+ },
+ "recycle": {
+  "region": "RecycleLabel",
+  "size": [
+   128,
+   208
+  ]
+ },
+ "roofSurface": {
+  "region": "RoofSurface",
+  "size": [
+   512,
+   384
+  ]
+ },
+ "roofTiles": {
+  "region": "RoofTiles",
+  "size": [
+   256,
+   256
+  ]
+ },
+ "shutter": {
+  "region": "Shutter",
+  "size": [
+   256,
+   256
+  ]
+ },
+ "signBack": {
+  "region": "SignBack",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "signFront": {
+  "region": "SignBand",
+  "size": [
+   2048,
+   200
+  ]
+ },
+ "signSide": {
+  "region": "SignBand",
+  "size": [
+   1600,
+   200
+  ]
+ },
+ "spokes": {
+  "region": "Spokes",
+  "size": [
+   256,
+   256
+  ]
+ },
+ "staffSign": {
+  "region": "StaffSign",
+  "size": [
+   256,
+   64
+  ]
+ },
+ "stopSign": {
+  "region": "StopSign",
+  "size": [
+   256,
+   256
+  ]
+ },
+ "storeFloor": {
+  "region": "StoreFloor",
+  "size": [
+   1024,
+   796
+  ]
+ },
+ "strata": {
+  "region": "Strata",
+  "size": [
+   512,
+   128
+  ]
+ },
+ "streetName": {
+  "region": "StreetName",
+  "size": [
+   384,
+   96
+  ]
+ },
+ "televisionWindow": {
+  "region": "CurtainWindow",
+  "size": [
+   160,
+   128
+  ]
+ },
+ "trashLabels": {
+  "region": "TrashLabels",
+  "size": [
+   384,
+   96
+  ]
+ },
+ "umbrellaBag": {
+  "region": "SmallLabel",
+  "size": [
+   128,
+   64
+  ]
+ },
+ "vendingRed": {
+  "region": "VendingFront",
+  "size": [
+   384,
+   704
+  ]
+ },
+ "vendingWhite": {
+  "region": "VendingFront",
+  "size": [
+   384,
+   704
+  ]
+ },
+ "walkGreen": {
+  "region": "WalkSignal",
+  "size": [
+   96,
+   96
+  ]
+ },
+ "walkRed": {
+  "region": "WalkSignal",
+  "size": [
+   96,
+   96
+  ]
+ },
+ "wallPosters": {
+  "region": "WallPosters",
+  "size": [
+   600,
+   280
+  ]
+ },
+ "wetFloor": {
+  "region": "WetFloorSign",
+  "size": [
+   128,
+   160
+  ]
+ },
+ "wifiSticker": {
+  "region": "Sticker",
+  "size": [
+   192,
+   64
+  ]
+ },
+ "windowPosters": {
+  "region": "WindowPosters",
+  "size": [
+   800,
+   280
+  ]
+ }
+}
