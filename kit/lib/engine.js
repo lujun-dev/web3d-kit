@@ -122,25 +122,6 @@ function registerArt(atlas) {
     ctx.fillStyle = '#ffffff';
     ctx.fillRect(0, 0, w, h);
   });
-  /* 横丁（居酒屋）素材 */
-  R.tile2 = atlas.register('kawara', 256, 256, (ctx, w, h) => ctx.drawImage(art.kawaraTexture(), 0, 0, w, h));
-  R.siding = atlas.register('siding', 256, 256, (ctx, w, h) => ctx.drawImage(art.sidingTexture(), 0, 0, w, h));
-  R.noren_1 = atlas.register('noren1', 320, 200, (ctx, w, h) => ctx.drawImage(art.norenTexture('呑み処'), 0, 0, w, h));
-  R.noren_2 = atlas.register('noren2', 320, 200, (ctx, w, h) => ctx.drawImage(art.norenTexture('焼き鳥', { base: '#2a2f3a' }), 0, 0, w, h));
-  R.lamp_1 = atlas.register('lamp1', 192, 256, (ctx, w, h) => ctx.drawImage(art.lanternJP('酒'), 0, 0, w, h));
-  R.lamp_2 = atlas.register('lamp2', 192, 256, (ctx, w, h) => ctx.drawImage(art.lanternJP('焼', { body: '#e8d7a8' }), 0, 0, w, h));
-  R.lamp_3 = atlas.register('lamp3', 192, 256, (ctx, w, h) => ctx.drawImage(art.lanternJP('鳥'), 0, 0, w, h));
-  R.lamp_4 = atlas.register('lamp4', 192, 256, (ctx, w, h) => ctx.drawImage(art.lanternJP('呑'), 0, 0, w, h));
-  R.sign_1 = atlas.register('sign1', 160, 640, (ctx, w, h) => ctx.drawImage(art.verticalSignJP('居酒屋 隆'), 0, 0, w, h));
-  R.sign_2 = atlas.register('sign2', 160, 640, (ctx, w, h) => ctx.drawImage(art.verticalSignJP('呑み処', { bg: '#2b2f3a', ink: '#f0e6cd' }), 0, 0, w, h));
-  R.menu_1 = atlas.register('menu1', 320, 448, (ctx, w, h) => ctx.drawImage(art.menuBoardJP(['本日のおすすめ', '焼き鳥 各種 150', 'おでん 100', '生ビール 400', '日本酒 500']), 0, 0, w, h));
-  R.poster_1 = atlas.register('poster1', 256, 352, (ctx, w, h) => ctx.drawImage(art.posterJP(['営業時間', '18:00 - 翌 3:00', '定休日 火曜'], {}), 0, 0, w, h));
-  R.poster_2 = atlas.register('poster2', 256, 352, (ctx, w, h) => ctx.drawImage(art.posterJP(['新装開店', 'お祝い', '大感謝祭'], { bg: '#f6e7c8' }), 0, 0, w, h));
-  R.vending = atlas.register('vending', 256, 384, (ctx, w, h) => ctx.drawImage(art.vendingFront(), 0, 0, w, h));
-  R.shutter = atlas.register('shutter', 256, 256, (ctx, w, h) => ctx.drawImage(art.shutterTexture(), 0, 0, w, h));
-  R.nobori = atlas.register('nobori', 160, 640, (ctx, w, h) => ctx.drawImage(art.noboriTexture('炭火焼鳥'), 0, 0, w, h));
-  R.aframe = atlas.register('aframe', 320, 448, (ctx, w, h) => ctx.drawImage(art.aframeTexture(['本日のおすすめ', 'ねぎま 150', 'つくね 180', 'ハイボール 350']), 0, 0, w, h));
-  R.windows = atlas.register('windows', 256, 256, (ctx, w, h) => ctx.drawImage(art.buildingWindows(), 0, 0, w, h));
   R.pool = atlas.register('pool', 256, 256, (ctx, w, h) => {
     const gradient = ctx.createRadialGradient(w / 2, h / 2, 0, w / 2, h / 2, w / 2);
     gradient.addColorStop(0, 'rgba(255,206,140,0.9)');
