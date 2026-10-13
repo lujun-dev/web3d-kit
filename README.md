@@ -19,6 +19,7 @@ assets/           资产包（一件一文件，机械拆出，不改写实现�
   props/          构件 35 件（店面 / 邻楼 / 电线杆 / 自行车 / 猫 …）
   systems/        机制 32 件（雨三层 · 溅水 · 滴水 · 发光通道 · 地面反射 · 墨线合成 · 泛光调色 · 自动门 …）
   scene/          场景形状与装配范例（把资产件拼回一场完整雨夜街景）
+  vendor/         搬运进来的第三方件（three.js examples/jsm · 程序化可平铺着色器），逐字未改、保留许可头
   manifest.json   清单：部件名 / 文件 / 类别 / 行数
 kit/              装配与自检工具
   blocks/registry.js   积木注册表 + 分轮（?step=1 几何 / 2 贴图 / 3 着色器与后处理）
@@ -27,14 +28,18 @@ tools/
   split-assets.py      拆分器（可复跑：从基准单文件重新生成整包）
   verify-assets.mjs    保真验证：把资产件拼回去 → 打包 → 跑起来 → 对照顶点数与报错
 docs/                  资产复用指南 · 同类开源拆解
+THIRD-PARTY-NOTICES.md 搬运件的许可与署名
 ```
 
 ## 跑起来
 
 ```bash
-npm install                 # three + esbuild（跑验证与打包用）
-node tools/verify-assets.mjs   # 把资产件拼回场景、打包、跑起来、对照数字
+npm install                     # three + esbuild（跑验证与打包用）
+node tools/verify-assets.mjs    # 自拆件：拼回场景 → 打包 → 跑起来 → 对照桶顶点数
+node tools/verify-vendor.mjs    # 搬运件：逐个 import + 实例化，抓「搬运件 ↔ 运行时 three 版本」的 API 漂移
 ```
+
+运行时 `three` 固定 **0.186.1**（与搬运件同版本）；第三方件的许可与署名见 [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)。
 
 验证通过的样子：无 pageerror / console error，且桶顶点数与基准一致
 （`outlined 77240 · plain 44108 · cutout 320 · exteriorGlass 36 · interiorGlass 40`，场景 50 个网格）。

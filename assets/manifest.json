@@ -2054,5 +2054,483 @@
   "systems/updateSplashes.js": 1,
   "systems/waitFor.js": 1,
   "systems/waitForFonts.js": 1
- }
+ },
+ "vendor": [
+  {
+   "name": "OrbitControls",
+   "path": "assets/vendor/three/examples/jsm/controls/OrbitControls.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "OutlineEffect",
+   "path": "assets/vendor/three/examples/jsm/effects/OutlineEffect.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "RoomEnvironment",
+   "path": "assets/vendor/three/examples/jsm/environments/RoomEnvironment.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "ConvexGeometry",
+   "path": "assets/vendor/three/examples/jsm/geometries/ConvexGeometry.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "DecalGeometry",
+   "path": "assets/vendor/three/examples/jsm/geometries/DecalGeometry.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "RoundedBoxGeometry",
+   "path": "assets/vendor/three/examples/jsm/geometries/RoundedBoxGeometry.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "HDRLoader",
+   "path": "assets/vendor/three/examples/jsm/loaders/HDRLoader.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "RGBELoader",
+   "path": "assets/vendor/three/examples/jsm/loaders/RGBELoader.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "Capsule",
+   "path": "assets/vendor/three/examples/jsm/math/Capsule.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "ConvexHull",
+   "path": "assets/vendor/three/examples/jsm/math/ConvexHull.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "ImprovedNoise",
+   "path": "assets/vendor/three/examples/jsm/math/ImprovedNoise.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "Lut",
+   "path": "assets/vendor/three/examples/jsm/math/Lut.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "MeshSurfaceSampler",
+   "path": "assets/vendor/three/examples/jsm/math/MeshSurfaceSampler.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "Octree",
+   "path": "assets/vendor/three/examples/jsm/math/Octree.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "SimplexNoise",
+   "path": "assets/vendor/three/examples/jsm/math/SimplexNoise.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "Lensflare",
+   "path": "assets/vendor/three/examples/jsm/objects/Lensflare.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "MarchingCubes",
+   "path": "assets/vendor/three/examples/jsm/objects/MarchingCubes.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "Reflector",
+   "path": "assets/vendor/three/examples/jsm/objects/Reflector.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "ReflectorForSSRPass",
+   "path": "assets/vendor/three/examples/jsm/objects/ReflectorForSSRPass.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "Refractor",
+   "path": "assets/vendor/three/examples/jsm/objects/Refractor.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "Sky",
+   "path": "assets/vendor/three/examples/jsm/objects/Sky.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "Water",
+   "path": "assets/vendor/three/examples/jsm/objects/Water.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "BokehPass",
+   "path": "assets/vendor/three/examples/jsm/postprocessing/BokehPass.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "EffectComposer",
+   "path": "assets/vendor/three/examples/jsm/postprocessing/EffectComposer.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "GTAOPass",
+   "path": "assets/vendor/three/examples/jsm/postprocessing/GTAOPass.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "LUTPass",
+   "path": "assets/vendor/three/examples/jsm/postprocessing/LUTPass.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "MaskPass",
+   "path": "assets/vendor/three/examples/jsm/postprocessing/MaskPass.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "OutputPass",
+   "path": "assets/vendor/three/examples/jsm/postprocessing/OutputPass.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "Pass",
+   "path": "assets/vendor/three/examples/jsm/postprocessing/Pass.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "RenderPass",
+   "path": "assets/vendor/three/examples/jsm/postprocessing/RenderPass.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "SMAAPass",
+   "path": "assets/vendor/three/examples/jsm/postprocessing/SMAAPass.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "SSRPass",
+   "path": "assets/vendor/three/examples/jsm/postprocessing/SSRPass.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "ShaderPass",
+   "path": "assets/vendor/three/examples/jsm/postprocessing/ShaderPass.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "UnrealBloomPass",
+   "path": "assets/vendor/three/examples/jsm/postprocessing/UnrealBloomPass.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "BokehShader",
+   "path": "assets/vendor/three/examples/jsm/shaders/BokehShader.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "ColorifyShader",
+   "path": "assets/vendor/three/examples/jsm/shaders/ColorifyShader.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "ConvolutionShader",
+   "path": "assets/vendor/three/examples/jsm/shaders/ConvolutionShader.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "CopyShader",
+   "path": "assets/vendor/three/examples/jsm/shaders/CopyShader.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "DotScreenShader",
+   "path": "assets/vendor/three/examples/jsm/shaders/DotScreenShader.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "GTAOShader",
+   "path": "assets/vendor/three/examples/jsm/shaders/GTAOShader.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "HalftoneShader",
+   "path": "assets/vendor/three/examples/jsm/shaders/HalftoneShader.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "LuminosityHighPassShader",
+   "path": "assets/vendor/three/examples/jsm/shaders/LuminosityHighPassShader.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "OutputShader",
+   "path": "assets/vendor/three/examples/jsm/shaders/OutputShader.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "PoissonDenoiseShader",
+   "path": "assets/vendor/three/examples/jsm/shaders/PoissonDenoiseShader.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "RGBShiftShader",
+   "path": "assets/vendor/three/examples/jsm/shaders/RGBShiftShader.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "SMAAShader",
+   "path": "assets/vendor/three/examples/jsm/shaders/SMAAShader.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "SSRShader",
+   "path": "assets/vendor/three/examples/jsm/shaders/SSRShader.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "VignetteShader",
+   "path": "assets/vendor/three/examples/jsm/shaders/VignetteShader.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "BufferGeometryUtils",
+   "path": "assets/vendor/three/examples/jsm/utils/BufferGeometryUtils.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "SceneUtils",
+   "path": "assets/vendor/three/examples/jsm/utils/SceneUtils.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "UVsDebug",
+   "path": "assets/vendor/three/examples/jsm/utils/UVsDebug.js",
+   "upstream": "three.js examples/jsm",
+   "version": "0.186.1",
+   "license": "MIT"
+  },
+  {
+   "name": "LICENSE",
+   "path": "assets/vendor/procedural-tileable-shaders/LICENSE",
+   "upstream": "tuxalin/procedural-tileable-shaders",
+   "version": "master",
+   "license": "见包内 LICENSE"
+  },
+  {
+   "name": "README.md",
+   "path": "assets/vendor/procedural-tileable-shaders/README.md",
+   "upstream": "tuxalin/procedural-tileable-shaders",
+   "version": "master",
+   "license": "见包内 LICENSE"
+  },
+  {
+   "name": "cellularNoise.glsl",
+   "path": "assets/vendor/procedural-tileable-shaders/cellularNoise.glsl",
+   "upstream": "tuxalin/procedural-tileable-shaders",
+   "version": "master",
+   "license": "见包内 LICENSE"
+  },
+  {
+   "name": "debug.glsl",
+   "path": "assets/vendor/procedural-tileable-shaders/debug.glsl",
+   "upstream": "tuxalin/procedural-tileable-shaders",
+   "version": "master",
+   "license": "见包内 LICENSE"
+  },
+  {
+   "name": "fbm.glsl",
+   "path": "assets/vendor/procedural-tileable-shaders/fbm.glsl",
+   "upstream": "tuxalin/procedural-tileable-shaders",
+   "version": "master",
+   "license": "见包内 LICENSE"
+  },
+  {
+   "name": "fbmImage.glsl",
+   "path": "assets/vendor/procedural-tileable-shaders/fbmImage.glsl",
+   "upstream": "tuxalin/procedural-tileable-shaders",
+   "version": "master",
+   "license": "见包内 LICENSE"
+  },
+  {
+   "name": "gradientNoise.glsl",
+   "path": "assets/vendor/procedural-tileable-shaders/gradientNoise.glsl",
+   "upstream": "tuxalin/procedural-tileable-shaders",
+   "version": "master",
+   "license": "见包内 LICENSE"
+  },
+  {
+   "name": "hash.glsl",
+   "path": "assets/vendor/procedural-tileable-shaders/hash.glsl",
+   "upstream": "tuxalin/procedural-tileable-shaders",
+   "version": "master",
+   "license": "见包内 LICENSE"
+  },
+  {
+   "name": "hexagons.glsl",
+   "path": "assets/vendor/procedural-tileable-shaders/hexagons.glsl",
+   "upstream": "tuxalin/procedural-tileable-shaders",
+   "version": "master",
+   "license": "见包内 LICENSE"
+  },
+  {
+   "name": "interpolate.glsl",
+   "path": "assets/vendor/procedural-tileable-shaders/interpolate.glsl",
+   "upstream": "tuxalin/procedural-tileable-shaders",
+   "version": "master",
+   "license": "见包内 LICENSE"
+  },
+  {
+   "name": "metric.glsl",
+   "path": "assets/vendor/procedural-tileable-shaders/metric.glsl",
+   "upstream": "tuxalin/procedural-tileable-shaders",
+   "version": "master",
+   "license": "见包内 LICENSE"
+  },
+  {
+   "name": "multiHash.glsl",
+   "path": "assets/vendor/procedural-tileable-shaders/multiHash.glsl",
+   "upstream": "tuxalin/procedural-tileable-shaders",
+   "version": "master",
+   "license": "见包内 LICENSE"
+  },
+  {
+   "name": "noise.glsl",
+   "path": "assets/vendor/procedural-tileable-shaders/noise.glsl",
+   "upstream": "tuxalin/procedural-tileable-shaders",
+   "version": "master",
+   "license": "见包内 LICENSE"
+  },
+  {
+   "name": "patterns.glsl",
+   "path": "assets/vendor/procedural-tileable-shaders/patterns.glsl",
+   "upstream": "tuxalin/procedural-tileable-shaders",
+   "version": "master",
+   "license": "见包内 LICENSE"
+  },
+  {
+   "name": "perlinNoise.glsl",
+   "path": "assets/vendor/procedural-tileable-shaders/perlinNoise.glsl",
+   "upstream": "tuxalin/procedural-tileable-shaders",
+   "version": "master",
+   "license": "见包内 LICENSE"
+  },
+  {
+   "name": "voronoi.glsl",
+   "path": "assets/vendor/procedural-tileable-shaders/voronoi.glsl",
+   "upstream": "tuxalin/procedural-tileable-shaders",
+   "version": "master",
+   "license": "见包内 LICENSE"
+  },
+  {
+   "name": "warp.glsl",
+   "path": "assets/vendor/procedural-tileable-shaders/warp.glsl",
+   "upstream": "tuxalin/procedural-tileable-shaders",
+   "version": "master",
+   "license": "见包内 LICENSE"
+  }
+ ]
 }

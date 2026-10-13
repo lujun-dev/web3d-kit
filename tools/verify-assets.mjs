@@ -61,8 +61,8 @@ const html = `<!doctype html>
 <script type="importmap">
 {
   "imports": {
-    "three": "https://registry.npmmirror.com/three/0.170.0/files/build/three.module.min.js",
-    "three/addons/": "https://registry.npmmirror.com/three/0.170.0/files/examples/jsm/"
+    "three": "https://registry.npmmirror.com/three/0.186.1/files/build/three.module.js",
+    "three/addons/": "https://registry.npmmirror.com/three/0.186.1/files/examples/jsm/"
   }
 }
 </script>
