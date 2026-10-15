@@ -14,7 +14,8 @@ const { chromium } = require('C:/Users/lu/AppData/Roaming/npm/node_modules/@play
 const out = path.resolve(process.argv[2] || path.join(ROOT, 'dist', 'shot.png'));
 const width = Number(process.argv[3] || 1440);
 const height = Number(process.argv[4] || 900);
-const entry = (process.argv[5] || 'dist/asset-verify.html').replace(/^\/+/, '');
+const target = (process.argv[5] || 'dist/asset-verify.html');
+const remote = /^https?:\/\//.test(target); // 传完整 URL = 直接截线上页面（不起本地服务）
 
 const MIME = {
   '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
@@ -33,8 +34,12 @@ const server = http.createServer((request, response) => {
   response.writeHead(200, { 'content-type': MIME[path.extname(file).toLowerCase()] || 'application/octet-stream' });
   fs.createReadStream(file).pipe(response);
 });
-await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
-const base = `http://127.0.0.1:${server.address().port}`;
+let base = '';
+if (!remote) {
+  await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
+  base = `http://127.0.0.1:${server.address().port}`;
+}
+const url = remote ? target : `${base}/${target.replace(/^\/+/, '')}`;
 
 const browser = await chromium.launch({ args: ['--enable-unsafe-swiftshader', '--use-angle=swiftshader'] });
 const page = await browser.newPage({ viewport: { width, height }, deviceScaleFactor: 1 });
@@ -45,7 +50,7 @@ page.on('console', (message) => {
   else if (message.type() === 'warning') problems.push('warn: ' + message.text());
 });
 
-await page.goto(`${base}/${entry}`, { waitUntil: 'load' });
+await page.goto(url, { waitUntil: 'load' });
 try {
   await page.waitForFunction(() => parseFloat(getComputedStyle(document.getElementById('scene')).opacity) > 0.98, null, { timeout: 60000 });
 } catch (error) {

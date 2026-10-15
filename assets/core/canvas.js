@@ -175,11 +175,10 @@ export function drawPavers(context, minX, minZ, maxX, maxZ, isAlongZ) {
   context.clip();
   fillGroundRect(context, minX, minZ, maxX, maxZ, '#555861');
   // 真实铺装照片（CC0 PavingStones131）在时直接平铺；夜里压暗一层，免得比周围沥青亮
-  if (drawPhotoTiled(context, photos.paving, paversLeft, paversTop, paversWidth, paversHeight, PAVING_TILE_PX)) {
+  const usePhoto = drawPhotoTiled(context, photos.paving, paversLeft, paversTop, paversWidth, paversHeight, PAVING_TILE_PX);
+  if (usePhoto) {
     context.fillStyle = 'rgba(16, 20, 30, 0.14)';
     context.fillRect(paversLeft, paversTop, paversWidth, paversHeight);
-    context.restore();
-    return;
   }
   const longSide = 0.22 * GROUND_SCALE;
   const shortSide = 0.11 * GROUND_SCALE;
@@ -193,8 +192,11 @@ export function drawPavers(context, minX, minZ, maxX, maxZ, isAlongZ) {
       const shiftY = isAlongZ ? (column % 2) * stepY * 0.5 : 0;
       const isWarm = random() < 0.07;
       const shade = 100 + Math.floor(random() * 16);
-      context.fillStyle = isWarm ? '#6f625a' : `rgb(${shade}, ${shade + 3}, ${shade + 10})`;
-      context.fillRect(x + offset + 1, y + shiftY + 1, stepX - 2, stepY - 2);
+      // 用照片时这一遍只跑不进画布：random() 的消耗必须与旧版一致，场景才可复现（顶点数与基准对得上）
+      if (!usePhoto) {
+        context.fillStyle = isWarm ? '#6f625a' : `rgb(${shade}, ${shade + 3}, ${shade + 10})`;
+        context.fillRect(x + offset + 1, y + shiftY + 1, stepX - 2, stepY - 2);
+      }
       column += 1;
     }
     row += 1;
