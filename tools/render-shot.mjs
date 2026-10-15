@@ -51,10 +51,15 @@ page.on('console', (message) => {
 });
 
 await page.goto(url, { waitUntil: 'load' });
-try {
-  await page.waitForFunction(() => { const el = document.getElementById('scene'); return !!el && parseFloat(getComputedStyle(el).opacity) > 0.98; }, null, { timeout: 60000 });
-} catch (error) {
-  problems.push('等待就绪超时或页面无 #scene：' + String(error).slice(0, 120));
+const hasScene = await page.evaluate(() => !!document.getElementById('scene'));
+if (hasScene) {
+  try {
+    await page.waitForFunction(() => { const el = document.getElementById('scene'); return !!el && parseFloat(getComputedStyle(el).opacity) > 0.98; }, null, { timeout: 60000 });
+  } catch (error) {
+    problems.push('等待就绪超时：' + String(error).slice(0, 120));
+  }
+} else {
+  await page.waitForTimeout(12000); // 没有 #scene 的页面（如对照页）：给内嵌页面留加载时间
 }
 await page.waitForTimeout(2000);
 fs.mkdirSync(path.dirname(out), { recursive: true });
