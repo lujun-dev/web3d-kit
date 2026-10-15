@@ -6,7 +6,7 @@
 import base64, json, os, subprocess, sys
 
 REPO = "lujun-dev/web3d-kit"
-K = r"D:\hermes-output\web3d-kit"
+K = os.environ.get("WEB3D_KIT_DIR") or r"D:\hermes-output\web3d-kit"
 
 def token():
     for gh in (r"C:\Program Files\GitHub CLI\gh.exe", "gh"):
