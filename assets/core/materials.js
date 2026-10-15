@@ -4,6 +4,7 @@ import * as THREE from 'three';
 import { W } from './world.js';
 import { createCanvas } from './canvas.js';
 import { GLASS_FRAGMENT_SHADER, GLASS_VERTEX_SHADER, GROUND_FRAGMENT_BODY, GROUND_FRAGMENT_HEADER, LAYER_EFFECTS } from './constants.js';
+import { PAVING_NORMAL_REPEAT, photos } from './photos.js';
 import { reflectionMatrix, toonGradient } from './util.js';
 
 /* createToonMaterial（core/materials） */
@@ -66,6 +67,16 @@ export function createGlassMaterial(hasRain) {
 /* createGroundMaterial（core/materials） */
 export function createGroundMaterial(albedoTexture, wetTexture) {
   const material = new THREE.MeshToonMaterial({ color: 0xffffff, gradientMap: W.groundGradient, map: albedoTexture });
+  // 真实石面法线（CC0 PavingStones131）：repeat 与 canvas 里 205px 一张贴图对齐（地面 UV 0..1 覆盖 24 单位）
+  if (photos.pavingNormal) {
+    const normalMap = new THREE.Texture(photos.pavingNormal);
+    normalMap.wrapS = THREE.RepeatWrapping;
+    normalMap.wrapT = THREE.RepeatWrapping;
+    normalMap.repeat.set(PAVING_NORMAL_REPEAT, PAVING_NORMAL_REPEAT);
+    normalMap.needsUpdate = true;
+    material.normalMap = normalMap;
+    material.normalScale = new THREE.Vector2(0.85, 0.85);
+  }
   material.onBeforeCompile = (shader) => {
     shader.uniforms.uReflectionMap = { value: W.reflectionTarget.texture };
     shader.uniforms.uReflectionMatrix = { value: reflectionMatrix };

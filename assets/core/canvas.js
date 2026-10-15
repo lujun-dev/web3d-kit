@@ -6,6 +6,7 @@ import { FACE, FONT_PLAIN, GROUND_SCALE } from './constants.js';
 import { addBox, addCylinder, addMesh, createTriangleProduct, getCachedGeometry } from './geometry.js';
 import { random } from './math.js';
 import { toGroundX, toGroundY } from './util.js';
+import { PAVING_TILE_PX, drawPhotoTiled, photos } from './photos.js';
 
 /* createCanvas（core/canvas） */
 export function createCanvas(width, height) {
@@ -164,11 +165,22 @@ export function fillGroundRect(context, minX, minZ, maxX, maxZ, color) {
 
 /* drawPavers（core/canvas） */
 export function drawPavers(context, minX, minZ, maxX, maxZ, isAlongZ) {
+  const paversLeft = toGroundX(minX);
+  const paversTop = toGroundY(minZ);
+  const paversWidth = (maxX - minX) * GROUND_SCALE;
+  const paversHeight = (maxZ - minZ) * GROUND_SCALE;
   context.save();
   context.beginPath();
   context.rect(toGroundX(minX), toGroundY(minZ), (maxX - minX) * GROUND_SCALE, (maxZ - minZ) * GROUND_SCALE);
   context.clip();
   fillGroundRect(context, minX, minZ, maxX, maxZ, '#555861');
+  // 真实铺装照片（CC0 PavingStones131）在时直接平铺；夜里压暗一层，免得比周围沥青亮
+  if (drawPhotoTiled(context, photos.paving, paversLeft, paversTop, paversWidth, paversHeight, PAVING_TILE_PX)) {
+    context.fillStyle = 'rgba(16, 20, 30, 0.14)';
+    context.fillRect(paversLeft, paversTop, paversWidth, paversHeight);
+    context.restore();
+    return;
+  }
   const longSide = 0.22 * GROUND_SCALE;
   const shortSide = 0.11 * GROUND_SCALE;
   const stepX = isAlongZ ? shortSide : longSide;
@@ -214,6 +226,13 @@ export function drawGrate(context, centerX, centerZ, isAlongX) {
   const top = toGroundY(centerZ) - height / 2;
   context.fillStyle = '#16181c';
   context.fillRect(left, top, width, height);
+  // 真实金属篦子贴图（CC0 Metal032）在时用它顶掉程序化格栅
+  if (drawPhotoTiled(context, photos.metal, left, top, width, height, 110)) {
+    context.strokeStyle = '#6d727a';
+    context.lineWidth = 2;
+    context.strokeRect(left, top, width, height);
+    return;
+  }
   context.fillStyle = '#5b6068';
   if (isAlongX) {
     for (let x = left + 3; x < left + width; x += 6) {

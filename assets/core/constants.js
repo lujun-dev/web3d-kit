@@ -308,8 +308,17 @@ export const GROUND_FRAGMENT_BODY = /* glsl */`
     float fresnel = 0.35 + 0.65 * pow(grazing, 2.5);
     vec4 projected = uReflectionMatrix * vec4(vGroundWorld.x, 0.0, vGroundWorld.z, 1.0);
     vec2 reflectionUv = projected.xy / projected.w + ripple * mix(0.006, 0.02, puddle);
+    // 真实石面/沥青法线（CC0 PavingStones131）扰动反射：水面镜像被表面起伏打散，湿地才有颗粒感
+    #ifdef USE_NORMALMAP
+      vec2 slope = texture2D(normalMap, vNormalMapUv).xy - 0.5;
+      reflectionUv += slope * mix(0.03, 0.006, puddle);
+    #endif
     float roughness = (1.0 - puddle) * (1.0 - 0.45 * paint);
-    float lod = roughness * 2.6;
+    // 亮处的石材更有纹理 → 更粗糙，暗处沥青更亮面：打破整片镜面的塑料感
+    #ifdef USE_NORMALMAP
+      roughness = mix(roughness, 1.0, smoothstep(0.04, 0.3, dot(diffuseColor.rgb, vec3(0.3333))) * 0.4);
+    #endif
+    float lod = roughness * 1.15;
     vec3 reflection = textureLod(uReflectionMap, reflectionUv, lod).rgb;
     vec3 streak = reflection;
     for (int tap = 1; tap <= 4; tap++) {
@@ -318,7 +327,7 @@ export const GROUND_FRAGMENT_BODY = /* glsl */`
       streak += textureLod(uReflectionMap, reflectionUv - vec2(0.0, offset * 0.6), lod + 0.5).rgb;
     }
     reflection = mix(streak / 9.0, reflection, puddle);
-    float reflectivity = mix(0.4 * wetness, 0.92, puddle) * fresnel;
+    float reflectivity = mix(0.58 * wetness, 1.05, puddle) * fresnel;
     outgoingLight *= mix(0.9, 0.34, puddle);
     outgoingLight += reflection * reflectivity + diffuseColor.rgb * paint * 0.035;
   }

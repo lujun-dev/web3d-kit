@@ -11,7 +11,7 @@
       "sha256": "92fe2b29b1957828fb8925a57633540bbba5bf380d9285ed553443e834249352",
       "bytes": 1440400,
       "sourceUrl": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/venice_sunset_1k.hdr",
-      "fetchedAt": "2026-10-12"
+      "fetchedAt": "2026-10-15"
     },
     {
       "name": "paving-stones-131",
@@ -24,7 +24,20 @@
       "sha256": "4b48575f51af3f8cd8ba20021f8a471f22435749782e553493967425e498fa4d",
       "bytes": 9241016,
       "sourceUrl": "https://ambientcg.com/get?file=PavingStones131_1K-JPG.zip",
-      "fetchedAt": "2026-10-12"
+      "fetchedAt": "2026-10-15"
+    },
+    {
+      "name": "asphalt-033",
+      "kind": "ambientcg",
+      "id": "Asphalt033",
+      "res": "1K",
+      "type": "JPG",
+      "dest": "assets/textures/Asphalt033_1K-JPG.zip",
+      "note": "路面沥青底子（替代整片平涂 #373b44），2026-10-15 加：观感优先，路面用真素材",
+      "fetchedAt": "2026-10-15",
+      "sha256": "c71801b342dbea594dbdd0bd2ddc0a6d13f813c923fca408b9f5b9ee5e58aba2",
+      "bytes": 9722569,
+      "sourceUrl": "https://ambientcg.com/get?file=Asphalt033_1K-JPG.zip"
     },
     {
       "name": "metal-032-grate",
@@ -37,7 +50,7 @@
       "sha256": "9e4f363905a647958c273154fa125d2a6440892d0e583f9b3af24bb08b5afc3c",
       "bytes": 3650556,
       "sourceUrl": "https://ambientcg.com/get?file=Metal032_1K-JPG.zip",
-      "fetchedAt": "2026-10-12"
+      "fetchedAt": "2026-10-15"
     }
   ]
 }

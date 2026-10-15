@@ -1,0 +1,66 @@
+/* photos —— 真实素材（CC0）的加载与取用
+   2026-10-15 新增。素材来源与校验和见 assets.lock.json（Poly Haven / ambientCG，CC0），
+   本体在 assets/hdri、assets/textures（不进仓库；node scripts/fetch-assets.mjs 复原）。
+
+   用途：把原先「用 canvas 程序化画出来」的地面/铁篦换成真实素材照片。
+   口径：观感优先 —— 缺素材不致命，调用方自动回退到程序化画法。 */
+
+export const photos = {};
+
+const ROOTED = (file) => [`assets/textures/${file}`, `../assets/textures/${file}`];
+
+const SOURCES = {
+  paving: ROOTED('paving/PavingStones131_1K-JPG_Color.jpg'),
+  pavingNormal: ROOTED('paving/PavingStones131_1K-JPG_NormalGL.jpg'),
+  asphalt: ROOTED('asphalt/Asphalt033_1K-JPG_Color.jpg'),
+  metal: ROOTED('metal/Metal032_1K-JPG_Color.jpg'),
+};
+
+/* 一张铺装贴图在贴图空间里占多少像素（= 2.4 世界单位，见 PAVING_NORMAL_REPEAT） */
+export const PAVING_TILE_PX = 205;
+export const ASPHALT_TILE_PX = 205;
+export const PAVING_NORMAL_REPEAT = 10; // 地面 UV 是 0..1 覆盖 24 单位 → 一张贴图 2.4 单位
+
+function loadImage(urls) {
+  const candidates = Array.isArray(urls) ? urls : [urls];
+  return new Promise((resolve) => {
+    const tryNext = (index) => {
+      if (index >= candidates.length) { resolve(null); return; }
+      const image = new Image();
+      image.onload = () => resolve(image);
+      image.onerror = () => tryNext(index + 1);
+      image.src = candidates[index];
+    };
+    tryNext(0);
+  });
+}
+
+export async function loadPhotos() {
+  const loaded = await Promise.all(
+    Object.entries(SOURCES).map(async ([key, url]) => [key, await loadImage(url)]),
+  );
+  for (const [key, image] of loaded) if (image) photos[key] = image;
+  if (typeof window !== 'undefined') window.__photos = photos; // 诊断探针
+  if (typeof console !== 'undefined') console.warn('[photos] 载入', Object.keys(photos).join(',') || '(无)');
+  return photos;
+}
+
+/* 在 canvas 的指定矩形里平铺画一张照片；tilePx = 一张贴图占多少像素 */
+export function drawPhotoTiled(context, image, x, y, width, height, tilePx) {
+  if (!image || width <= 0 || height <= 0) return false;
+  // 开发开关：地址栏带 ?noPhotos=1 时全部退回程序化画法（用于做「接素材前/后」对照）
+  if (typeof location !== 'undefined' && /[?&]noPhotos=1/.test(location.search)) return false;
+  const pattern = context.createPattern(image, 'repeat');
+  if (!pattern) return false;
+  const scale = tilePx / image.width;
+  context.save();
+  context.beginPath();
+  context.rect(x, y, width, height);
+  context.clip();
+  context.translate(x, y);
+  context.scale(scale, scale);
+  context.fillStyle = pattern;
+  context.fillRect(0, 0, width / scale, height / scale);
+  context.restore();
+  return true;
+}

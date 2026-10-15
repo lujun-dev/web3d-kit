@@ -4,4 +4,15 @@ dist/
 
 # 下载来的大素材本体不进仓库（只存 assets.lock.json + 重下脚本）
 assets/hdri/
-assets/textures/
+assets/textures/*
+# 例外：展示站要用到的四张贴图（页面直接引，必须随仓库走）
+!assets/textures/paving/
+assets/textures/paving/*
+!assets/textures/paving/PavingStones131_1K-JPG_Color.jpg
+!assets/textures/paving/PavingStones131_1K-JPG_NormalGL.jpg
+!assets/textures/asphalt/
+assets/textures/asphalt/*
+!assets/textures/asphalt/Asphalt033_1K-JPG_Color.jpg
+!assets/textures/metal/
+assets/textures/metal/*
+!assets/textures/metal/Metal032_1K-JPG_Color.jpg

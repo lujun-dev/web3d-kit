@@ -25,6 +25,8 @@ import {
 } from '../core/constants.js';
 import { addWetBlob, finalizeBuckets } from '../core/geometry.js';
 import { createBackgroundTexture, createGlassMaterial, createToonMaterial } from '../core/materials.js';
+import { loadPhotos } from '../core/photos.js';
+import { ASPHALT_TILE_PX, drawPhotoTiled, photos } from '../core/photos.js';
 import { random, randomBetween } from '../core/math.js';
 import {
   registerAtlasRegions,
@@ -72,6 +74,17 @@ export function drawGroundAlbedo() {
   const gutterConcrete = '#5f626a';
   context.fillStyle = asphalt;
   context.fillRect(0, 0, GROUND_SIZE, GROUND_SIZE);
+  // 真实沥青照片（CC0 Asphalt033）铺满路面底子；后面的区域色块/铺装/标线照旧盖在上面
+  if (drawPhotoTiled(context, photos.asphalt, 0, 0, GROUND_SIZE, GROUND_SIZE, ASPHALT_TILE_PX)) {
+    context.fillStyle = 'rgba(14, 18, 28, 0.34)';
+    context.fillRect(0, 0, GROUND_SIZE, GROUND_SIZE);
+    // 再叠一层同图（overlay 混合）：把照片本身的颗粒对比拉出来，否则沥青太平看不出材质
+    context.save();
+    context.globalAlpha = 0.5;
+    context.globalCompositeOperation = 'overlay';
+    drawPhotoTiled(context, photos.asphalt, 0, 0, GROUND_SIZE, GROUND_SIZE, ASPHALT_TILE_PX);
+    context.restore();
+  }
 
   // Store lot, alley, neighbor yard and back yard.
   fillGroundRect(context, -12, -12, 3.8, 3.8, '#5d6068');
@@ -229,6 +242,7 @@ export function drawGroundAlbedo() {
   context.stroke();
 
   // Fine grain everywhere.
+  if (typeof window !== 'undefined') window.__groundCanvas = canvas; // 诊断探针
   const image = context.getImageData(0, 0, GROUND_SIZE, GROUND_SIZE);
   const data = image.data;
   let seed = 12345;
@@ -346,6 +360,7 @@ export function createGroundGeometry() {
 /* initialize（scene） */
 export async function initialize() {
   await waitForFonts();
+  await loadPhotos();
   registerAtlasRegions();
   const atlasTexture = W.atlas.pack();
   W.materials = {
