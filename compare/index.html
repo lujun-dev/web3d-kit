@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>雨夜便利店 · 两版对照</title>
+<style>
+  :root { color-scheme: dark; }
+  html, body { height: 100%; margin: 0; }
+  body { background: #0a0b10; color: #e6e8ee; font: 14px/1.5 system-ui, "Microsoft YaHei", sans-serif; display: flex; flex-direction: column; }
+  header { padding: 10px 16px; border-bottom: 1px solid #1e222b; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+  header b { font-size: 15px; }
+  header span { color: #8b93a3; }
+  a { color: #7cb0ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  main { flex: 1; display: flex; min-height: 0; }
+  section { flex: 1; display: flex; flex-direction: column; min-width: 0; border-right: 1px solid #1e222b; }
+  section:last-child { border-right: 0; }
+  .cap { padding: 7px 12px; color: #a7aebd; border-bottom: 1px solid #1e222b; display: flex; justify-content: space-between; gap: 10px; }
+  .cap b { color: #e6e8ee; font-weight: 600; }
+  iframe { border: 0; width: 100%; flex: 1; background: #04060b; }
+  @media (max-width: 860px) { main { flex-direction: column; } section { border-right: 0; border-bottom: 1px solid #1e222b; } }
+</style>
+</head>
+<body>
+<header>
+  <b>雨夜便利店 · 两版对照</b>
+  <span>左：原版参考（单文件，无素材）　右：我们的版本（接 CC0 素材 + 反射调整）</span>
+  <span><a href="ref-opus55.html" target="_blank">单独打开原版</a>　<a href="../index.html" target="_blank">单独打开我们的版本</a></span>
+</header>
+<main>
+  <section>
+    <div class="cap"><b>原版参考</b><span>opus55 单文件 · three 0.170</span></div>
+    <iframe src="ref-opus55.html" title="原版参考"></iframe>
+  </section>
+  <section>
+    <div class="cap"><b>我们的版本</b><span>web3d-kit · CC0 素材 · three 0.186</span></div>
+    <iframe src="../index.html" title="我们的版本"></iframe>
+  </section>
+</main>
+</body>
+</html>

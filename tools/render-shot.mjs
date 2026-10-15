@@ -52,9 +52,9 @@ page.on('console', (message) => {
 
 await page.goto(url, { waitUntil: 'load' });
 try {
-  await page.waitForFunction(() => parseFloat(getComputedStyle(document.getElementById('scene')).opacity) > 0.98, null, { timeout: 60000 });
+  await page.waitForFunction(() => { const el = document.getElementById('scene'); return !!el && parseFloat(getComputedStyle(el).opacity) > 0.98; }, null, { timeout: 60000 });
 } catch (error) {
-  problems.push('等待就绪超时：' + String(error).slice(0, 120));
+  problems.push('等待就绪超时或页面无 #scene：' + String(error).slice(0, 120));
 }
 await page.waitForTimeout(2000);
 fs.mkdirSync(path.dirname(out), { recursive: true });
