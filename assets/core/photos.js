@@ -7,6 +7,11 @@
 
 export const photos = {};
 
+/* 素材开关：默认关（默认观感＝原版程序化画法）；地址栏加 ?photos=1 才启用，离线对照时用 */
+export function photosEnabled() {
+  return typeof location !== 'undefined' && /[?&]photos=1/.test(location.search);
+}
+
 const ROOTED = (file) => [`assets/textures/${file}`, `../assets/textures/${file}`];
 
 const SOURCES = {
@@ -36,6 +41,11 @@ function loadImage(urls) {
 }
 
 export async function loadPhotos() {
+  // 默认关闭：观感对照实测「接素材」与程序化无肉眼差别，却多 5.6MB 下载 —— 改成显式开关，地址栏加 ?photos=1 才启用
+  if (!photosEnabled()) {
+    if (typeof console !== 'undefined') console.warn('[photos] 未启用（默认关；需要时加 ?photos=1）');
+    return photos;
+  }
   const loaded = await Promise.all(
     Object.entries(SOURCES).map(async ([key, url]) => [key, await loadImage(url)]),
   );
@@ -48,8 +58,6 @@ export async function loadPhotos() {
 /* 在 canvas 的指定矩形里平铺画一张照片；tilePx = 一张贴图占多少像素 */
 export function drawPhotoTiled(context, image, x, y, width, height, tilePx) {
   if (!image || width <= 0 || height <= 0) return false;
-  // 开发开关：地址栏带 ?noPhotos=1 时全部退回程序化画法（用于做「接素材前/后」对照）
-  if (typeof location !== 'undefined' && /[?&]noPhotos=1/.test(location.search)) return false;
   const pattern = context.createPattern(image, 'repeat');
   if (!pattern) return false;
   const scale = tilePx / image.width;

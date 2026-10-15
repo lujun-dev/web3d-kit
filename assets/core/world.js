@@ -47,10 +47,7 @@ W.renderer.setClearColor(0x000000, 1);
 W.renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
 
 /* ── 顶层语句（世界/控制/事件/启动）── */
-W.renderer.toneMapping = THREE.ACESFilmicToneMapping;
-
-/* ── 顶层语句（世界/控制/事件/启动）── */
-W.renderer.toneMappingExposure = 1.1;
+W.renderer.toneMapping = THREE.NoToneMapping;
 
 /* ── 顶层语句（世界/控制/事件/启动）── */
 W.renderer.shadowMap.enabled = true;

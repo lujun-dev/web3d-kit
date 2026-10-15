@@ -292,17 +292,8 @@ var GROUND_FRAGMENT_BODY = (
     float fresnel = 0.35 + 0.65 * pow(grazing, 2.5);
     vec4 projected = uReflectionMatrix * vec4(vGroundWorld.x, 0.0, vGroundWorld.z, 1.0);
     vec2 reflectionUv = projected.xy / projected.w + ripple * mix(0.006, 0.02, puddle);
-    // \u771F\u5B9E\u77F3\u9762/\u6CA5\u9752\u6CD5\u7EBF\uFF08CC0 PavingStones131\uFF09\u6270\u52A8\u53CD\u5C04\uFF1A\u6C34\u9762\u955C\u50CF\u88AB\u8868\u9762\u8D77\u4F0F\u6253\u6563\uFF0C\u6E7F\u5730\u624D\u6709\u9897\u7C92\u611F
-    #ifdef USE_NORMALMAP
-      vec2 slope = texture2D(normalMap, vNormalMapUv).xy - 0.5;
-      reflectionUv += slope * mix(0.03, 0.006, puddle);
-    #endif
     float roughness = (1.0 - puddle) * (1.0 - 0.45 * paint);
-    // \u4EAE\u5904\u7684\u77F3\u6750\u66F4\u6709\u7EB9\u7406 \u2192 \u66F4\u7C97\u7CD9\uFF0C\u6697\u5904\u6CA5\u9752\u66F4\u4EAE\u9762\uFF1A\u6253\u7834\u6574\u7247\u955C\u9762\u7684\u5851\u6599\u611F
-    #ifdef USE_NORMALMAP
-      roughness = mix(roughness, 1.0, smoothstep(0.04, 0.3, dot(diffuseColor.rgb, vec3(0.3333))) * 0.4);
-    #endif
-    float lod = roughness * 1.15;
+    float lod = roughness * 2.6;
     vec3 reflection = textureLod(uReflectionMap, reflectionUv, lod).rgb;
     vec3 streak = reflection;
     for (int tap = 1; tap <= 4; tap++) {
@@ -311,7 +302,7 @@ var GROUND_FRAGMENT_BODY = (
       streak += textureLod(uReflectionMap, reflectionUv - vec2(0.0, offset * 0.6), lod + 0.5).rgb;
     }
     reflection = mix(streak / 9.0, reflection, puddle);
-    float reflectivity = mix(0.58 * wetness, 1.05, puddle) * fresnel;
+    float reflectivity = mix(0.4 * wetness, 0.92, puddle) * fresnel;
     outgoingLight *= mix(0.9, 0.34, puddle);
     outgoingLight += reflection * reflectivity + diffuseColor.rgb * paint * 0.035;
   }
@@ -2496,6 +2487,9 @@ function finalizeBuckets() {
 
 // assets/core/photos.js
 var photos = {};
+function photosEnabled() {
+  return typeof location !== "undefined" && /[?&]photos=1/.test(location.search);
+}
 var ROOTED = (file) => [`assets/textures/${file}`, `../assets/textures/${file}`];
 var SOURCES = {
   paving: ROOTED("paving/PavingStones131_1K-JPG_Color.jpg"),
@@ -2523,6 +2517,10 @@ function loadImage(urls) {
   });
 }
 async function loadPhotos() {
+  if (!photosEnabled()) {
+    if (typeof console !== "undefined") console.warn("[photos] \u672A\u542F\u7528\uFF08\u9ED8\u8BA4\u5173\uFF1B\u9700\u8981\u65F6\u52A0 ?photos=1\uFF09");
+    return photos;
+  }
   const loaded = await Promise.all(
     Object.entries(SOURCES).map(async ([key, url]) => [key, await loadImage(url)])
   );
@@ -2533,7 +2531,6 @@ async function loadPhotos() {
 }
 function drawPhotoTiled(context, image, x, y, width, height, tilePx) {
   if (!image || width <= 0 || height <= 0) return false;
-  if (typeof location !== "undefined" && /[?&]noPhotos=1/.test(location.search)) return false;
   const pattern = context.createPattern(image, "repeat");
   if (!pattern) return false;
   const scale = tilePx / image.width;
@@ -2849,8 +2846,7 @@ W.renderer = new THREE5.WebGLRenderer({
 });
 W.renderer.setClearColor(0, 1);
 W.renderer.outputColorSpace = THREE5.LinearSRGBColorSpace;
-W.renderer.toneMapping = THREE5.ACESFilmicToneMapping;
-W.renderer.toneMappingExposure = 1.1;
+W.renderer.toneMapping = THREE5.NoToneMapping;
 W.renderer.shadowMap.enabled = true;
 W.renderer.shadowMap.type = THREE5.PCFSoftShadowMap;
 W.renderer.shadowMap.autoUpdate = false;
